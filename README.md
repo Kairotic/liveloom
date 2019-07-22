@@ -1,11 +1,11 @@
 
-= lasercut.svg =
+# lasercut.svg
 
 This creates the shapes required to lasercut a loom from 3mm
 material. I used baltic birch plywood, MDF would likely do just as
 well.
 
-= Other things needed =
+# Other things needed
 
 - 4mm diameter metal rod
 - 25mm diameter wooden rod
@@ -29,7 +29,7 @@ well.
 - diodes to protect everything against kickback from the
   solenoids. I still need to add these myself!
 
-= Rough instructions =
+# Rough instructions
 
 My plywood was bendier in one direction - basically if there is a
 grain have it go horizontal otherwise E1/E2 will bend too much with
