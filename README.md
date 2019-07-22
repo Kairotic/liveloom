@@ -1,11 +1,14 @@
+# Liveloom
 
-# lasercut.svg
+A warp-weighted loom, live codeable via solenoids.
+
+## lasercut.svg
 
 This creates the shapes required to lasercut a loom from 3mm
 material. I used baltic birch plywood, MDF would likely do just as
 well.
 
-# Other things needed
+## Other things needed
 
 - 4mm diameter metal rod
 - 25mm diameter wooden rod
@@ -29,7 +32,7 @@ well.
 - diodes to protect everything against kickback from the
   solenoids. I still need to add these myself!
 
-# Rough instructions
+## Rough instructions
 
 My plywood was bendier in one direction - basically if there is a
 grain have it go horizontal otherwise E1/E2 will bend too much with
@@ -57,3 +60,22 @@ provided holes.
 
 Contact alex@slab.org with any questions - I'd be happy offer advice
 to get you up and running.
+
+## WWL.hs
+
+An experimental haskell library for live coding the loom.
+
+Start ghci, and then initialise the library like this (replacing with the path to your arduino's USB connection):
+```
+:load WWL
+
+(set, next, undo, again, show) <- startFs "/dev/serial/by-id/usb-Arduino__www.arduino.cc__0043_5573731323135141A191-if00"
+```
+
+Then code a structure like this:
+
+```
+set $ every 2 rev $ twill 1 $ cycle [up,down,down,up]
+```
+
+And run `next` to send the next line to the loom, `again` to send it again, or `undo` to go back.
