@@ -1,0 +1,1 @@
+pandoc --variable mainfont="Linux Libertine O" --latex-engine=xelatex  -V geometry:margin=1in --number-sections --csl chicago-author-date.csl --bibliography=/home/alex/Dropbox/citeulike/alex.bib paper.md -o paper.pdf
