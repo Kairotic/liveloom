@@ -1,49 +1,60 @@
+% The Live Loom
+% Author removed for peer review
+
 ---
 header-includes: |
     \usepackage{caption}
     \usepackage{subcaption}
 ...
 
-# Live weaving
+# Introduction
 
-Live coding is the exploratory practice of changing code while it
-runs, using a programming language as a live interface to a running
-process, and therefore its inputs and outputs. The prototypical
-application of live coding in the performing arts, such as music,
-video or choreography. Live coding may be used to refer to any use of
-code in any kind of live situation, but in the present paper we focus
-on its classic use in live improvisation, where code is written
-without a fixed aim, often from a notional 'blank slate'.
+*Live coding* is the exploratory practice of changing code while it
+runs. A live coder uses a programming language as a live interface to
+a running process, and its inputs and outputs. This allows the
+programmer to participate in the performing arts, for example to
+create music, live video or dance. Live coding may be used to refer to
+any use of code in any kind of live situation, but for the purposes of
+this paper, we will focus on live coding as live improvisation, where
+code is written without a fixed aim, often from a notional 'blank
+slate'.
 
-Weaving is a textile craft, where parallel threads known as the *warp*
-are held under tension, allowing a second set of threads (known as the
-*weft*) to passed over and under them to create a fabric.
+*Weaving* is a textile craft, where parallel threads known as the
+*warp* are held under tension, allowing a second set of threads (known
+as the *weft*) to be passed over and under the warp threads to create
+a textile fabric.
+
+This paper investigates how live coding and weaving can be brought
+together, looking for ways to ground the contemporary practice of live
+coding in the ancient craft of weaving.
 
 # Setting aside the Jacquard machine
 
-The Jacquard machine is a well known device for intricate control of
-loom warp lifts, classically using punch cards. Across both computer
-science and popular culture, the Jacquard machine is often invoked as
-part of the origin story of computation, particularly as Babbage
-mentions it as an influence. However the Jacquard does not *do*
-computation, it is merely an input mechanism. The Jacquard machine
-therefore brings a fundamental misunderstanding to the topic of
-weaving and computation which is very difficult to work around.
+The Jacquard machine is a well known device for individual control of
+threads in the weaving process, classically through the use of punch
+cards. From across computer science and popular culture, the Jacquard
+machine is often invoked as part of an 'origin story' of computation,
+ Charles Babbage mentions it as an influence. However,
+the Jacquard machine does not *do* computation, it is merely a
+mechanism for accepting input data. The Jacquard machine therefore
+brings a fundamental misunderstanding to the topic of weaving and
+computation which is very difficult to work around.
 
 Yes, weaving is computational, and yes, the Jacquard machine allowed
 abstract data to be fed into that computation. But the same
 computational nature is present in all weaving, including traditions
 of hand weaving developed over millennia. The computation was already
-there before Jacquard, and the his device only takes humans further
-away from that computation. So while Jacquard's machine is often given
-as an example of the beginning of the relationship between weaving and
-computing the opposite is true - it was an end.
+there before Jacquard, and by automating the weaving process, his
+device only takes humans further away from that computation. So while
+Jacquard's machine is often given as an example of the beginning of
+the relationship between weaving and computing the opposite is true -
+it was an end.
 
-So lets try to wipe the Jacquard machine from our minds in the
-following discussion. Once we do that, we are able to see that the
-such machinery did not introduce any computation to weaving - the
+So let's try to wipe the Jacquard machine from our minds in the
+following discussion. Once we do that, we are able to see that such
+machinery did not introduce any computation to weaving - the
 computation was there already. As will become evident in this paper,
-the computation isn't in the machine, but in the weave.
+the computation is not in the machine, but in the weave.
 
 # Introducing the live loom
 
@@ -53,66 +64,94 @@ be individually picked from software. First I explain the technology
 of the warp-weighted loom, and later explain the electro-mechanical
 attachments.
 
-We can say that primary purpose of any loom is to hold a group of
-parallel threads,the *warp*, in parallel and under tension, allowing
-*weft* threads to be woven up and down between the weft threads. The
-warp-weighted loom is an ancient technology, where tension comes from
-the effects of gravity, in particular by hanging weights at the bottom
-of warp threads. This is counter to what is seen on modern looms,
-where warp threads is generally horizontal, and held in tension
-through mechanical means. The core components of a loom are therefore
-very simple, consisting of a frame holding two horizontal bars in
-place, one to hang the warp from, another further down to help keep
-the threads in order, and potentially create a 'natural' default shed
-for the weft to pass through.
+The primary purpose of any loom is to hold a group of parallel
+threads, the *warp*, in parallel and under tension, allowing *weft*
+threads to be woven over and under the warp threads. The warp-weighted
+loom is an ancient technology, where tension comes from the effects of
+gravity, by attaching weights to the bottom of the warp threads. By
+contrast, on modern looms warp threads are generally horizontal, and
+held in tension through mechanical means. The essential components of
+a warp-weighted loom are therefore very simple, consisting of a frame
+holding two horizontal bars in place, one to hang the warp from,
+another below separating alternate threads, keeping them in order, and
+creating a potential gap (using weaving terminology, the *natural
+shed*) for the weft to pass through. The simplicity of the loom is
+also its advantage - the simpler the loom, the fewer constraints and
+therefore more possibilities there are to weave complex structures on
+it.
+
+\centering
+
+![](plain-draft.png){width=25%}
+![](twill-draft.png){width=25%}
+![](satin-draft.png){width=25%}\
+![](plain-weave-a.png){width=25%}
+![](twill-weave-a.png){width=25%}
+![](satin-weave-a.png){width=25%}\
+![](plain-weave-b.png){width=25%}
+![](twill-weave-b.png){width=25%}
+![](satin-weave-b.png){width=25%}
+
+\begin{figure}[!h]
+\hspace{0.10\textwidth}
+\begin{subfigure}[t]{0.25\textwidth}
+\caption{Tabby/plain weave}
+\end{subfigure}
+\begin{subfigure}[t]{0.25\textwidth}
+\caption{3-1 twill weave}
+\end{subfigure}
+\begin{subfigure}[t]{0.25\textwidth}
+\caption{Satin weave}
+\end{subfigure}
+\caption{Fundamental weave structures, shown with binary 'draft' structure (top), simulated weave with light warp and dark weft (middle), and simulated weave with alternating light and dark warp and weft (bottom)}
+\end{figure}
+
+\flushleft
 
 The weaving process involves a weft thread going over and under the
-warp threads, following one of a large possibilities of patterns,
-creating for example tabby, twill or satin structures. In practice
-selective warp threads are pulled forward, creating a 'shed' - a gap
-between the pulled and non-pulled warp threads - through which the
-weft travels in a straight line. When the warp threads are returned,
-the weft is trapped inside, and the next shed is prepared.
+warp threads, following one of a large possibilities of patterns, for
+example creating tabby, twill or satin structures (see
+Fig. xxx). Selective warp threads are pulled forward, creating a new
+gap or shed between the pulled and non-pulled warp threads, through
+which the weft travels in a straight line. When the warp threads are
+returned, the weft is trapped inside, and the next shed is
+prepared. 
 
-# Weaving technology
+## Weaving technology
 
-Although you could say that the live loom has a contemporary 'maker'
-aesthetic, due to its lasercut plywood construction, at its core, it
-is a handloom following ancient warp-weighted loom design. The
-additional electro-mechanical parts do not replace the core function
-of the warp-weighted loom, but rather augment it in order to allow
-threads to be selected using a computer language as well as directly
-by hand.
-
-The warp-weighted loom has a simple structure of a frame with hanging
-threads, but it is important to bear in mind that to some extent, the
-simpler the loom, the more possibilities there are to weave on it. The
-computational complexity of weaving comes not from the loom, but from
-the processes of weaving on it.
-
-## Solenoid actuators
+The Live Loom is shown in Figure xxx. Although it carries a
+contemporary 'maker' aesthetic due to its lasercut plywood
+construction, at its core, it is a handloom following an ancient
+warp-weighted loom design. The additional electro-mechanical parts do
+not replace the core function of the loom, but rather augment it in
+order to allow threads to be selected using a computer language as
+well as directly by hand.
 
 The live loom is fitted with a number of solenoids (currently
 sixteen), mounted on two axes to double the number that could
-otherwise fit on the loom. The solenoids are controlled by an arduino
-microcontroller, via a bank of relays. When activated, each relay will
-push against a stick, which pulls its corresponding warp thread
-forward via a string heddle. In this paper we refer to the wooden
-stick and string heddle collectively as the *heddle*.
+otherwise fit in a given space. The solenoids are controlled by an
+arduino microcontroller, via a bank of relays. When activated, each
+relay will push against a stick, which pulls its corresponding warp
+thread forward via a string. In this paper we refer to the wooden
+stick and string collectively as the *heddle*. With each solenoid
+controlling one warp thread, the resulting weave is currently
+constrained to sixteen threads across.
 
-Crucially, the solenoid movement is *not* designed to create the shed
-(gap between two layers of pulled and not-pulled warp threads) through
-which the weft thread passes. Instead this movement is only to 'offer
-up' warp threads to the human weaver-coder, who then pulls the threads
-further with their hands. This seems like a deficiency of power and
-leverage, but is not; this 'offering up' means the weaver can choose
-whether or not to pull each thread. This is particularly useful at the
-edges of the weave, where adjustments are often required to produce a
-good fabric. This reminds of the live coding choreographic work of
-Sicchio (xxx); in a similar way, we are not directly live coding a
-textile weave, but movements of the body in producing that weave. It
-is humane to respect the ability of people to exercise creativity and
-agency in the way they interpret instructions given to them.
+Crucially, these solenoid movements are *not* designed to fully create
+a shed. Instead this movement only 'offers up' warp threads to the
+human weaver-coder, who then pulls the threads further by hand. This
+seems like a deficiency of power and leverage, but is not; this
+'offering up' means the weaver can choose whether or not to pull each
+thread. This is particularly useful at the edges of the weave, where
+adjustments are often required to produce a good fabric. 
+
+The suggestive nature of instructions sent via the solenoids reminds
+of the live coding choreographic work of Sicchio (xxx). We can think
+of this process as not directly live coding a textile weave, but
+instead suggesting bodily movements to producing that weave. When live
+coding people rather than computers, it is humane to respect their
+ability to exercise creativity and agency in the way they interpret
+instructions given to them.
 
 # Computing a weave
 
@@ -137,20 +176,6 @@ thread going under one warp, over two warps, and repeat. The second
 row shows a weft thread going under two warps, over one warp, and then
 repeating.
 
-![](draft.png){width=50%}
-![](draft-out.png){width=50%}
-\begin{figure}[!h]
-\begin{subfigure}[t]{0.5\textwidth}
-\caption{Draft pattern}
-\end{subfigure}
-\hfill
-\begin{subfigure}[t]{0.5\textwidth}
-\caption{Result}
-\end{subfigure}
-\caption{A draft pattern and the visual result of virtually weaving it.}
-\end{figure}
-
-
 There are also coloured squares at the top and bottom, showing the
 pattern of warp and weft colours respectively, in this case both
 alternating between green and blue. In order to find what colour will
@@ -159,42 +184,63 @@ the warp colour is shown, so we follow the column up to find its
 colour, otherwise we follow the row the left. ^[In practice, there are
 other variables which change which colour thread is visible, for
 example if weft threads are tightly packed, warp threads are hidden
-completely.]
+completely.] From this we can see that where warp and weft meet with a
+matching colour (in this case, every other cell in a checkerboard
+pattern), the visible colour cannot be changed by the structure. This
+is analogous to the Moire effect seen by placing one net over another,
+with the visible result being the interference of the upper and lower
+structures.
+
+\centering
+
+![](draft.png){width=40%}
+![](draft-out.png){width=40%}
+\begin{figure}[!h]
+
+\hspace{0.1\textwidth}\begin{subfigure}[t]{0.4\textwidth}
+\caption{Draft pattern}
+\end{subfigure}
+\begin{subfigure}[t]{0.4\textwidth}
+\caption{Result}
+\end{subfigure}
+\caption{A draft pattern and the visual result of virtually weaving it.}
+\end{figure}
+
+\flushleft
 
 If we plot out the result of this interference between thread colour
 and weave structure, we arrive at the image shown in Fig. 1(b). This
 result will be surprising to a layperson, not only is the vertical and
 horizontal stripe of warp and weft not visible, but the diagonal runs
-in a completely different direction to the underlying weave
-structure. This experience will be familiar to those who have explored
-algorithmic interference patterns in livecoding software such as
-TidalCycles or Hydra, simple inputs often create unexpected, more
-unexpected results.
+in a different direction to the underlying weave structure. This
+experience will be familiar to those who have explored algorithmic
+interference patterns in livecoding software such as TidalCycles or
+Hydra, simple inputs often create unexpected, more complex results.
 
-Finally, Fig. 2 shows a fabric woven using this structure and alternating
+Finally, Fig. xxx shows a fabric woven using this structure and alternating
 white and blue threads, created on the live loom.
 
 ![](weave-diagonal.png){width=50%}
 
-The same features hold in the weave itself, but not too well defined,
-due to interaction between the threads, and variation in density. The
-left and right edges are a mess, because in practice such a structure
-simply cannot be woven at the edges. Weft threads generally travel
-from left to right for one row, and from right to left on the
-next. Therefore, if a weft ends a row over a warp, and begins the next
-row also over a warp, then it will not be woven at that point. An
-experienced weaver will make consistent changes at the selvage, such
-as adding some rows of plain weave, to ensure a coherent result.
-
-# Origins of computation
+The same features hold in the weave itself, although are not too well
+defined, due to interaction between the threads, and variation in
+density. The left and right edges are a mess, because in practice such
+a structure simply cannot be woven at the edges. Weft threads
+generally travel from left to right for one row, and from right to
+left on the next. Therefore, if a weft ends a row over a warp, and
+begins the next row also over a warp, then it will not be woven at
+that point. A more experienced weaver would make consistent changes at
+the edges (known as the *selvage*), such as adding some rows of plain
+weave, to ensure a coherent result.
 
 The above description of colour and weave effects should give us pause
 for thought. Weaving predates computer programming and indeed discrete
-mathematics in general, but nonetheless is a computational system, of
-which any handloom affords exploration. When considering the
-computational nature of weaving then, we must be careful not to be
-dazzled by the machinery or electronics of industrial and contemporary
-weaving technology, when it is the ancient technology of the threads
+mathematics in general, but nonetheless is a logical, discrete and
+therefore digital computational system. Furthermore, any handloom
+affords exploration of this system. When considering the computational
+nature of weaving then, we must be careful not to be dazzled by the
+machinery or electronics of industrial and contemporary weaving
+technology, when it is the ancient technology of the threads
 themselves that provides the environment for computation.
 
 # Coding the draft
@@ -206,7 +252,7 @@ digital computers. It is therefore possible to add a further level of
 abstraction by using a programming language to create a draft. The
 purpose of doing so is to create patterns from patterns, making a rich
 space to explore weaving and gain tacit knowledge both about how it
-works and its relation to computation as it is more conventionally
+works, and its relation to computation as it is more conventionally
 understood in the context of programming languages.
 
 Each layer of abstraction takes us further away from the material, but
@@ -216,48 +262,49 @@ touching.
 
 Fig xxx. shows the current version of the live loom coding
 interface. The code is shown on the left, using the visual live coding
-Texture (xxx), originally designed as an exploratory interface for
-TidalCycles but here repurposed for a simpler system designed for
-discrete, binary draft patterns. The set of available symbols and
-keywords on the top right are, which may be dragged into the code
-using a mouse. On the bottom right a window into the draft pattern is
-shown, with the row most recently being sent to the live loom marked
-with blue squares on either side. Finally the row number is written
-below (which in this case is higher than the number of rows shown, as
-the previous rows have scrolled off the top). The weave-coder can
-manipulate the code with a mouse, while using arrow keys on a keyboard
-to step forwards (or backwards) through the draft, sending each warp
-lift to the loom to be actuated by the solenoids and woven by the
-weaver.
+Texture [@McLean11], originally designed as an exploratory interface
+for the TidalCycles environment, but here repurposed for a simpler
+system designed for discrete, binary draft patterns. The set of
+available symbols and keywords are on the top right, which may be
+dragged into the code using a mouse. On the bottom right a window into
+the draft pattern is shown, with the row most recently being sent to
+the live loom marked with blue squares on either side. Finally the row
+number is written below, which in this case is higher than the number
+of rows shown, as the previous rows have scrolled off the top. The
+weaver-coder can manipulate the code with a mouse, while using arrow
+keys on a keyboard to step forwards (or backwards) through the draft,
+sending each warp lift to the loom to be actuated by the solenoids and
+woven by the weaver.
 
-Perhaps most notable about this software is what is *not* shown in the
-interface. In particular, the simulation shown earlier could easily be
-included, but is not, indeed thread colour is not dealt with at all in
-the software, only on the loom. Keeping colour on the loom takes focus
-away from any simulation on screen and onto the 'ground truth' of the
-material. After all, colour is only one quality of thread, alongside
-thickness, material, ply, tightness and direction of twist, tension
-and density of warp and weft, and so on. Trying to simulate all of
-these continuous variables on-screen is hardly possible, while
+Perhaps most notable is what is *not* shown in the software
+interface. In particular, simulation of thread colour (such as that
+shown earlier) could easily be included, but is not, indeed thread
+colour is not dealt with at all in the software, only on the
+loom. Keeping colour on the loom takes focus away from any simulation
+on screen and places it in the 'ground truth' of the material. After
+all, colour is only one quality of thread, alongside thickness,
+material, ply, tightness and direction of twist, tension and density
+of warp and weft, and so on. Trying to simulate all of these
+continuous variables on-screen would be an insurmountable task, and
 focussing the software on the singular task of planning the discrete
 structure of ups and downs works very well.
 
 ## Live loom language
 
 The language currently used by the Live loom is the pure functional
-programming language Haskell, based around its list datatype. Standard
-Haskell lists are lazily evaluated, which means that infinitely long
-lists can be represented, by being calculated on demand. A weave
-structure is simply represented by a one dimensional list of Boolean
-values, where *true* and *false* stands for *up* and *down*.
+programming language *Haskell*, and is based around its list
+datatype. Standard Haskell lists are 'lazily evaluated', which means
+that infinitely long lists can be represented and calculated on
+demand. A weave structure is simply represented by a one dimensional
+list of Boolean values, where *true* and *false* stands for *up* and
+*down* (or if you prefer, *over* and *under*).
 
-The range of functions for composing draft patterns on the live loom
-is small but already provides very rich space of possibility. The
-weave-coder begins with a list of ups and downs, then applies
-functions to transform that list and/or combine it with other
-lists. The following table describes the functions and operators
+The current number of functions for composing draft patterns on the
+live loom is small but already provides very rich space of
+possibility. The weaver-coder begins with a list of ups and downs,
+then applies functions to transform that list and/or combine it with
+other lists. The following table describes the functions and operators
 available in the live loom code interface.
-
 
 | name         | description                                                            |
 |--------------|------------------------------------------------------------------------|
@@ -277,88 +324,90 @@ results from simple elements.
 
 # Working at the Live Loom
 
-The above figure shows the live loom software interface next to the
-woven outcome. This starkly shows the perceptual gap between code,
-draft and weave, with little visual correspondance despite the
-structures of the weave and draft being constructed by their leftmost
-neighbour. The code is represented as a branching tree (due to the
-visual interface directly showing the branching normally represented
-by parenthesis). This creates a pattern which perhaps has the
-appearance of vines growing up a wall. When this structure interferes
-with the alternating colours of warp and weft, the final result
-appears as (to my eyes) legs leaping into the air.
+Figure xxx shows the live loom software interface next to the woven
+outcome. This starkly shows the perceptual gap between code, draft and
+weave, with little visual correspondance despite the structures of the
+draft being a logical outcome from the code, and the weave being that
+of the draft. The code is represented as a branching tree, the visual
+interface directly showing the branching normally represented by
+parenthesis [@McLean11]. This particular code creates the draft
+pattern shown, which perhaps has the appearance of vines growing up a
+wall. When this structure interferes with the alternating colours of
+warp and weft, the final result appears in the weave as (to my eyes)
+legs leaping into the air.
 
 ![](caroline.png){width=40%}
 
-It is humbling that the logical leap from draft to weave is ancient
-knowledge, demonstrating mathematical logic while predating our
-conventional view of mathematics. 
+It is humbling that this logical leap from draft to weave constitutes
+ancient knowledge, demonstrating mathematical logic while predating
+our conventional view of mathematics. This brings historical grounding
+to the analogous logical leap from code to draft, shown alongside.
 
 ## Music of the loom
 
 The solenoids are not triggered at once but in sequence, to even out
-the use of electrical power, as less ampage is required to hold a
-solenoid than to move it (xxx is this true in practice?). The most
-time-efficient way to do this would be to trigger the 'up' threads,
-pulling the warps one after the other, evenly spaced in time. However
-I have found it much more useful to include 'down' threads in the
-timing, so each row takes the same amount of time to actuate, no
-matter how many warps are being pulled forward. This gives a clear
-rhythm to each row, where the 'clunk' of a solenoid are heard for ups,
-and a 'rest' or gap are heard for downs. This rhythm breathes life
-into the weaving process, making it easier to orient myself in the
-pattern and spot errors, as I compare the rhythm I hear with the
-threads that I see. It also brings rhythmic enjoyment to repetetive
-nature of weaving.
+the use of electrical power, with less needed to hold a solenoid than
+to move it. The most time-efficient way to do this would be to trigger
+the 'up' threads, pulling the warps one after the other, evenly spaced
+in time. However I have found it much more useful to include 'down'
+threads in the timing, so each row takes the same amount of time to
+actuate, no matter how many warps are being pulled forward. This gives
+a clear rhythm to each row, where the 'clunk' of a solenoid is heard
+for an up, and a silent pause is heard for downs. This rhythm breathes
+life into the weaving process, making it easier to orient myself in
+the pattern and spot errors, as I compare the rhythm I hear with the
+threads I see. It also brings rhythmic enjoyment to repetitive nature
+of weaving, compelling me forward into the next row.
 
 The solenoids have a particular 'duty cycle', meaning that it is best
 not to keep them activated for too long, otherwise they may
 overheat. Once all the solenoids are activated, the microcontroller
-holds them in place for two seconds, plenty of time for the weaver to
-place a hand on the heddles and pull the selected warp threads
-forward. Although born from a technical need, these two seconds add an
-additional sense of regulated timing to the process of
+holds them in place for a few seconds, giving enough time for the
+weaver to place a hand on the heddles and pull the selected warp
+threads forward. Although born from a technical need, these few
+seconds add an additional sense of regulated timing to the process of
 weaving. However if the heddles are not caught in time, the
-weave-coder can repeat the lift with a quick press of the up arrow.
+weaver-coder can repeat the lift with a quick press of the up arrow
+key. The weaver can also unweave by stepping backwards through the
+structure with the left arrow.
 
 # Live Coding
 
 So far we have discussed action, but not live reaction. We have looked
 at coding the loom with a draft, and coding the coding of the loom by
-introducing a language for composing the draft, but we haven't
-discussed live coding - the changing of code in response. Let's do
-that now.
+introducing a language for composing a draft, but we haven't discussed
+live coding - the changing of code in response. Let's do that now.
 
 ## Changing patterns
 
-Live coding of music is often characterised by slow, continuous
-changes. Changes are heard immediately, but the complexity of music
-grows with the code. The experience of the live loom is rather
-different, where a small change tends to have a large, global effect,
-but each change takes time to become apparent, rows are only produced
-at a rate of a few per minute, and it might take two or three repeats
-of a pattern before its nature can really be perceived.  These big
-differences from small edits are due to the multiple levels of
+Live coding of music is often characterised by comparatively slow,
+continuous changes. Changes are heard immediately, but the complexity
+of music grows with the code. The experience of the live loom is
+rather different, where a small change tends to have a large, global
+effect, but each change takes time to become apparent, rows are only
+produced at a rate of a few per minute, and it might take two or three
+repeats of a pattern before its nature can really be perceived.  These
+big differences from small edits are due to the multiple levels of
 interference, between code, draft and weave.
 
 A change from one pattern to the next also presents a problem of
-transition, where one pattern does not sit well with the next,
+transition, where one pattern might not sit well with the next,
 potentially creating a physically uneven structure, with undesireable
 floats (see below). It can take a disturbed row or two before the
 weave settles into the next structure. There are certainly parallels
 here with live coding music and indeed music in general, where a
 sudden change can be jarring, without a careful transition. Managing
-this transition is probably best done at the loom, adjusting the lift
+this transition is probably best done at the loom, adjusting each shed
 at the heddles by hand.
 
 At this slow pace of change though, we are in the domain analogous to
-slow coding rather than frenzy of an algorave, each decision can be
-considered carefully. Furthermore in weaving we work with physical
-thread, rather than with the metaphorical thread of time as with live
-coding of music. This means that we are able to undo a weave in a way
-that we cannot undo music, and change our minds. By unweaving, the
-weaver, like the mythological figure of Penelope, resists external
-forces.
+slow coding rather than frenzy of an algorave. Where each decision has
+long term consequences, there is a need for careful
+consideration. Furthermore in weaving we work with physical thread,
+rather than with the metaphorical thread of time as with live coding
+of music. This means that we are able to undo a weave in a way that we
+cannot undo music, and change our minds. By unweaving, the weaver,
+like the mythological figure of Penelope, resists external forces.
 
 ## Embracing error
 
@@ -366,24 +415,106 @@ Live coders are known for embracing error, and so it is fortunate that
 it is so easy to produce a draft which is unweavable. For example,
 there is the problem of 'floats', lengths of unwoven fibre created
 wherever there is a contiguous series of either ups or downs in the
-warp or weft direction. If there are only either ups or downs in any
-row or column, that thread will not be woven into the fabric. In
-response to a problematic draft the weaver can do one of three
-things - change the code to look for a more weavable draft, ignore
-activated heddles or pull additional ones to change the weave
+warp or weft direction. Indeed, there are only either ups or downs in
+a given row or column, that thread will not be woven into the fabric
+at all. In response to a problematic draft the weaver can do one of
+three things - change the code to look for a more weavable draft,
+ignore activated heddles or pull additional ones to change the weave
 directly, or just attempt to weave the pattern anyway.
 
 In the above example, the draft looked unweavable to my naive eyes,
 due to the pairs of identical rows within it. Where this happens,
-essentially two wefts are passed through the same shed. I thought this
-would result in a mess, but out of curiosity went ahead anyway, and
-found that with care the wefts would still run parallel and stay in
-order, maintaining the 'correct' pattern. Furthermore, because the
-repeat in the draft consists of an odd number of rows, and I was
-weaving with two different wefts, the wefts would alternate from one
-repeat to the next travelling from one side to the other together, and
-travelling in opposite directions. A surprising, pleasing, and subtle
-result.
+pairs of consecutive wefts are passed through the same shed. I thought
+this would result in a mess, but out of curiosity went ahead anyway,
+and found that with care the wefts would still run parallel and stay
+in order, largely maintaining the 'correct' structure
+on-screen. Furthermore, because the repeat in the draft consists of an
+odd number of rows, and I was weaving with two different wefts, the
+wefts would alternate between either travelling from one side to the
+other together, or travelling in opposite directions. By embracing
+this error I arrived at a (to me) surprising, pleasing, and subtle
+result, although there are undoubtedly many such surprises on the way
+to becoming an experienced weaver.
+
+## Weaving the edit
+
+Decisions at the live loom are taken slowly, responding to problems
+and opportunities as they arise in the weave. Figure X shows the
+starting point for another improvised weave, a draft appearing to be a
+kind of hatched vertical pattern, drifting to the left, with lines
+sometimes joining or breaking. When it came to weaving this structure,
+two features slowly became apparent -- the pervasive pairs of ups and
+downs on the weft, offset from one row to the next, seemed to result
+in the warp spreading out vertically, and therefore partially hiding
+the warp at points where I expected it to be visible. This created an
+a partly *weft-faced* weave. However, some long floating threads were
+present on the warp direction, and the weft-facing only accentuated
+the presence of these long warps lying on top.
+
+After weaving 20 rows of this pattern, I hit a snag - the pattern of
+repeating warp floats drifted until they sat at both edges of the
+fabric (Fig. xxx). I realised that having floats at the selvage would
+cause the textile to lose its otherwise uniform width, and I decided I
+neither wanted this effect or to change it by hand; I had been
+enjoying working the two wefts together at the selvage, and felt that
+having a warp float there would create a mess. So instead I changed
+the pattern, adding code to invert every other row, as an effort to
+break up warp floats. However, after a few rows of weaving the edit, I
+realised that by breaking up some floats, I had only created new
+ones. Another tweak, this time changing a number from 3 to 1 seemed to
+fix it. However once I started weaving I realised the floats were
+still there, but now so long that they took up the whole edge and so
+were no longer visible on-screen.
+
+This time I decided having such long floats was an interesting enough
+challenge to pursue, and embraced this compounded error as an
+opportunity to experiment more with creating extra binding points at
+the selvage by hand. The results did indeed turn out to be
+interesting, the resulting weave curiously appearing to be much more
+uniform than the draft pattern. As the long threads stepped one weft
+to the left, they cycled between white and blue, over a steep
+diagonal. This time, the resulting motif reminded me of quipu knots.
+
+The resulting experimental weave charts an experiment in three
+stages. First, the initial serendipitous discovery of a weft-faced
+structure with warp floats. Then a transition as I searched for a
+solution to a perceived problem at the selvage. Finally a longer
+section, with some manual experimentation at the selvage. The
+resulting fabric tells a story of its making, from a starting point,
+to prevaracation and decision, with further learning points charted
+along the edge as I learned to deal with the selvage.
+
+# Women's work
+
+Comparing the contemporary practice of live coding with the ancient
+craft of handweaving has potential to support and extend a somewhat
+obscured feminist history of computation. Feminist perspectives on
+computing and weaving hardly new, a well-known reference point being
+Sadie Plant's influential text "Zeros and Ones: Digital Women and the
+New Technoculture" [@Plant1998]. However, the once dominant role of
+women in computer programming has been steadily erased since the 1960s
+and '70s [@Hicks2017], and despire recent efforts, gender diversity in
+software engineering is an ongoing problem. 
+
+As a relatively new interdisciplinary practice, live coding offers an
+opportunity to build a gender diverse culture. Gender diversity is a
+core topic across live coding research and practice
+[@Armitage2018]. Turkle and Papert related gender to the plurality of
+relationships between coder and program observed in children,
+describing a more conversational approach to coding, with mid-course
+corrections rather than fixed-goals as *bricolage* [@Turkle90,
+p. 136]. This approach is certainly evocative of live coding, with the
+suggestion being that it is one likely to be favoured by girls, but
+discouraged by instructors in favour of more fixed design processes.
+
+@Armitage2018 brings together female perspectives on live coding in
+the Algorave scene, relating one interviews experience of live coding
+"... as a way of working through their daily life, adding structures
+to it and providing functions for being. These lived patterns merge
+with their daydreams and expressions of colour and geometry to form
+her live coded visuals." (Armitage, xxx, p. 39). This again evokes
+Turkle and Papert's bricoleur, and indeed the social and intellectual
+function of weaving in building a personal cosmos.^[https://penelope.hypotheses.org/1400]
 
 # Conclusion
 
