@@ -608,7 +608,7 @@ its making, from a starting point, to prevaracation and decision, with
 further learning points charted along the edge as I learned to deal
 with the selvage.
 
-# Women's work
+# Alternative history
 
 Comparing the contemporary practice of live coding with the ancient
 craft of handweaving has potential to support and extend a somewhat
