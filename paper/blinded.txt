@@ -1,0 +1,24 @@
+Author: Alex McLean <<alex@slab.org>>,	Deutsches Museum, Munich
+
+
+This work is situated within the ERC PENELOPE project lead by Ellen
+Harlizius-Klück, against the background of her work exploring the
+computational nature of weaving
+[e.g. @harlizius_kluck_ellen_2017_3342554]. The aims of the overall
+PENELOPE project are to explore weaving as a technical mode of
+existence, and to re-establish its place in the history of science and
+technology. Within this context, the present paper looks to explore
+the relation between live coding and improvisation at the loom, with
+the longer term goal to help communicate the complex nature of weaving
+structures.
+
+
+
+I am grateful for all the input and feedback from colleagues and
+workshop participants in this work.
+
+This research is conducted by the PENELOPE project, with funding from
+the European Research Council (ERC) under the Horizon 2020 research
+and innovation programme of the European Union, grant agreement No
+682711.
+

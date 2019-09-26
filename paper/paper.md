@@ -31,16 +31,7 @@ coding in the ancient craft of weaving.
 
 # Background
 
-This work is situated within the ERC PENELOPE project lead by Ellen
-Harlizius-Klück, against the background of her work exploring the
-computational nature of weaving
-[e.g. @harlizius_kluck_ellen_2017_3342554]. The aims of the overall
-PENELOPE project are to explore weaving as a technical mode of
-existence, and to re-establish its place in the history of science and
-technology. Within this context, the present paper looks to explore
-the relation between live coding and improvisation at the loom, with
-the longer term goal to help communicate the complex nature of weaving
-structures.
+*Paragraph removed for peer review*.
 
 The connection between textile craft and computation has been very
 well explored in the digital arts and beyond. However, as
