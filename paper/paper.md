@@ -1,7 +1,7 @@
 % The Live Loom
 
 ---
-author: Alex McLean <<alex@slab.org>>,	Deutsches Museum, Munich
+author: Removed for peer review
 header-includes: |
     \usepackage{caption}
     \usepackage{subcaption}
@@ -660,17 +660,19 @@ repetitive, yet cognitive nature of handweaving.
 There is much to follow the preliminary work introduced here. This
 paper has purposefully focussed on understanding of weave from the
 perspective of live coding, taking care to have respect for this
-ancient craft. It could be however that weaving practice could benefit
-from such a computer language interface. Whereas 
+technologically craft that has developed since Ancient times. It could
+be however that weaving practice could benefit from such a computer
+language interface, for example replacing the current relatively
+time-consuming process of uploading bitmap images whenever the pattern
+is changed on a TC2 loom. Introducing 'real' weavers to the live loom
+would undoubtedly also turn up valueable criticism of its
+design. Furthermore while some hands-on workshops have already been
+conducted, more involved long-form work with workshop participants are
+needed to explore the possibilities of the loom in helping people
+explore the complexities and possibilities of handweaving.
 
 # Acknowledgements
 
-I am grateful for all the input and feedback from colleagues and
-workshop participants in this work.
-
-This research is conducted by the PENELOPE project, with funding from
-the European Research Council (ERC) under the Horizon 2020 research
-and innovation programme of the European Union, grant agreement No
-682711.
+Removed for peer review.
 
 # References
