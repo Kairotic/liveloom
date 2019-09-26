@@ -1,7 +1,7 @@
 % The Live Loom
-% Author removed for peer review
 
 ---
+author: Alex McLean <<alex@slab.org>>,	Deutsches Museum, Munich
 header-includes: |
     \usepackage{caption}
     \usepackage{subcaption}
@@ -31,6 +31,17 @@ coding in the ancient craft of weaving.
 
 # Background
 
+This work is situated within the ERC PENELOPE project lead by Ellen
+Harlizius-Klück, against the background of her work exploring the
+computational nature of weaving
+[e.g. @harlizius_kluck_ellen_2017_3342554]. The aims of the overall
+PENELOPE project are to explore weaving as a technical mode of
+existence, and to re-establish its place in the history of science and
+technology. Within this context, the present paper looks to explore
+the relation between live coding and improvisation at the loom, with
+the longer term goal to help communicate the complex nature of weaving
+structures.
+
 The connection between textile craft and computation has been very
 well explored in the digital arts and beyond. However, as
 @mccallum_glitching_2018 notes, this work does not always engage
@@ -49,6 +60,16 @@ integrates textile electromechanical relays into a fabric,
 demonstrating that a feminist approach to linking textiles with
 computing goes far beyond metaphor - textiles can compute.
 
+In the weaving industry, the technology of computer-controlled looms
+is of course also well developed. In the present work we are
+interested in analogies with live coding, so interested in 'hands-on'
+computer control, which is not afforded by machine looms, where the
+human weaver is replaced by a machine. However, hand-operated computer
+controlled looms *do* exist, and the present work is much inspired by
+the looms designed by Vibeke Vestby and manufactered by Digital
+Weaving Norway, including experiments conducted on the TC1 loom in
+Textiles Zentrum Haslach, Austria [@mclean_fabricating_2018]. 
+
 # Setting aside the Jacquard machine
 
 The Jacquard machine is a well known device for individual control of
@@ -65,14 +86,16 @@ Yes, weaving is computational, and yes, the Jacquard machine allowed
 abstract data to be fed into that computation. But the same
 computational nature is present in all weaving, including traditions
 of hand weaving developed over millennia. The computation was already
-there before Jacquard, and by helping automate the weaving process, his
-device only takes humans further away from that computation. So while
-Jacquard's machine is often given as an example of the beginning of
-the relationship between weaving and computing the opposite is true -
-it was an end.
+there before Jacquard, and by helping automate the weaving process,
+his device only takes humans further away from that computation. So
+while Jacquard's machine is often given as an example of the beginning
+of the relationship between weaving and computing the opposite is
+true - it was an end.
 
 So let's try to wipe the Jacquard machine from our minds in the
-following discussion. Once we do that, we are able to see that such
+following discussion, not because the technology isn't interesting and
+useful, but because the discussion around it is so full of
+misunderstanding. Once we do that, we are able to see that such
 machinery did not introduce any computation to weaving - the
 computation was there already. As will become evident in this paper,
 the computation is not in the machine, but in the weave.
@@ -535,44 +558,55 @@ long warps lying on top.
 \caption{}
 \end{subfigure}
 
-\caption{\label{screenshots}Screenshots of Live Loom interface at six different points in the weaving of fabric (see Fig. xxx).}
+\caption{\label{screenshots}Screenshots of Live Loom interface at six different points in the weaving of fabric (see Fig. \ref{float-result}).}
 \end{figure}
 
 
-After weaving 20 rows of this pattern, I hit a snag - the pattern of
-repeating warp floats drifted until they sat at both edges of the
-fabric, seen in Fig. \ref{screenshots}(b). I realised that having floats at the
-selvage would cause the textile to lose its otherwise uniform width,
-and I decided I neither wanted this effect or to change it by hand; I
-had been enjoying working the two wefts together at the selvage, and
-felt that having a warp float there would create a mess. So instead I
-changed the structure to that seen in \ref{screenshots}(c), adding code to invert
-every other row, as an effort to break up warp floats. However, after
-a few rows of weaving the edit to the point shown in Fig. \ref{screenshots}(d), I
-realised that by breaking up some floats, I had only created new
-ones. Another tweak shown in Fig. \ref{screenshots}(e), this time changing a number
-from \ref{screenshots} to 1, seemed to fix it. However once I started weaving I
-realised the floats were still there, but now so long that they took
-up the whole edge and so were no longer visible on-screen.
+After weaving 20 rows of this pattern (Fig. \ref{float-result}a), I
+hit a snag - the pattern of repeating warp floats drifted until they
+sat at both edges of the fabric, seen in Fig. \ref{screenshots}(b). I
+realised that having floats at the selvage would cause the textile to
+lose its otherwise uniform width, and I decided I neither wanted this
+effect or to change it by hand; I had been enjoying working the two
+wefts together at the selvage, and felt that having a warp float there
+would create a mess. So instead I changed the structure to that seen
+in \ref{screenshots}(c), adding code to invert every other row, as an
+effort to break up warp floats. However, after a few rows of weaving
+the edit (Fig. \ref{float-result}b) to the point in the interface
+shown in Fig. \ref{screenshots}d, I realised that by breaking up some
+floats, I had only created new ones. Another tweak shown in
+Fig. \ref{screenshots}(e), this time changing a number from
+\ref{screenshots} to 1, seemed to fix it. However once I started
+weaving I realised the floats were still there, but now so long that
+they took up the whole edge and so were no longer visible on-screen.
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{float.pdf}
+  \end{center}
+  \caption{\label{float-result}Result of improvised weave edits shown in Fig \ref{screenshots}}
+\end{figure}
 
 This time I decided having such long floats was an interesting enough
 challenge to pursue, and embraced this compounded error as an
 opportunity to experiment more with creating extra binding points at
 the selvage by hand. I continued with this structure for 53 rows, up
-until the point seen in Fig. \ref{screenshots}(f).  The results did indeed turn out to
-be interesting, the resulting weave curiously appearing to be much
-more uniform than the draft pattern. As the long threads stepped one
-warp to the left, they cycled between white and blue, over a steep
+until the point seen in Fig. \ref{screenshots}(f).  The resulting
+weave shown in \ref{float-result}c did indeed turn out to be
+interesting, the resulting weave curiously appearing to be much more
+coherent than the draft pattern. As the long threads stepped one warp
+to the left, they cycled between white and blue, over a steep
 diagonal. This time, the resulting motif reminded me of quipu knots.
 
-The resulting experimental weave charts an experiment in three
-stages. First, the initial serendipitous discovery of a weft-faced
-structure with warp floats. Then a transition as I searched for a
-solution to a perceived problem at the selvage. Finally a longer
-section, with some manual experimentation at the selvage. The
-resulting fabric tells a story of its making, from a starting point,
-to prevaracation and decision, with further learning points charted
-along the edge as I learned to deal with the selvage.
+The resulting experimental weave we have seen in Fig. \{float-result}
+charts an experiment in three stages. First, the initial serendipitous
+discovery of a) a weft-faced structure with warp floats. Then
+transition b) as I searched for a solution to a perceived problem at
+the selvage. Finally a longer section c), with some manual
+experimentation at the selvage. The resulting fabric tells a story of
+its making, from a starting point, to prevaracation and decision, with
+further learning points charted along the edge as I learned to deal
+with the selvage.
 
 # Women's work
 
@@ -621,5 +655,21 @@ weaving since ancient times, and using solenoids in communicating
 movement from the code to the weaver, the live loom allows creative
 exploration of woven patterns in a way that is sympathetic to the
 repetitive, yet cognitive nature of handweaving.
+
+There is much to follow the preliminary work introduced here. This
+paper has purposefully focussed on understanding of weave from the
+perspective of live coding, taking care to have respect for this
+ancient craft. It could be however that weaving practice could benefit
+from such a computer language interface. Whereas 
+
+# Acknowledgements
+
+I am grateful for all the input and feedback from colleagues and
+workshop participants in this work.
+
+This research is conducted by the PENELOPE project, with funding from
+the European Research Council (ERC) under the Horizon 2020 research
+and innovation programme of the European Union, grant agreement No
+682711.
 
 # References
