@@ -180,7 +180,7 @@ trapped inside, and the next shed is prepared.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.48\textwidth]{wwl.png}
+\includegraphics[width=0.48\textwidth]{wwl-small.png}
 \end{center}
 \caption{\label{liveloom}The Live Loom, a warp-weighted loom, with live-codable heddles via solenoid actuators.}
 \end{figure}
@@ -515,7 +515,7 @@ weave directly, or just attempt to weave the pattern anyway.
 \caption{\label{doubleweft-code}Live Loom code and draft showing pairs of identical rows.}
 \end{subfigure}
 \begin{subfigure}[t]{0.3165\textwidth}
-\includegraphics{doubleweft.jpg}
+\includegraphics{doubleweft-small.jpg}
 \caption{\label{doubleweft}The resulting weave, showing pairs of wefts that have
   travelled through the same shed.}
 \end{subfigure}
@@ -607,7 +607,7 @@ they took up the whole edge and so were no longer visible on-screen!
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{float.pdf}
+    \includegraphics[width=0.3\textwidth]{float-small.pdf}
   \end{center}
   \caption{\label{float-result}Result of improvised weave edits shown in Fig \ref{screenshots}}
 \end{figure}
