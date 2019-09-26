@@ -5,6 +5,7 @@
 header-includes: |
     \usepackage{caption}
     \usepackage{subcaption}
+	\usepackage{wrapfig}
 ...
 
 # Introduction
@@ -26,7 +27,27 @@ a textile fabric.
 
 This paper investigates how live coding and weaving can be brought
 together, looking for ways to ground the contemporary practice of live
-coding in the ancient craft of weaving [@McLean2018].
+coding in the ancient craft of weaving.
+
+# Background
+
+The connection between textile craft and computation has been very
+well explored in the digital arts and beyond. However, as
+@mccallum_glitching_2018 notes, this work does not always engage
+deeply with the structure or history of textiles. McCallum's own work
+explores the notion of 'glitch' in media art and how it transfers to
+textiles, but given that the latter has developed over a far longer
+period than the former, it is not surprising that along the way he
+finds much that media art can learn from textiles.
+
+*Stitching Worlds* is a recent, far reaching project imagining a world
+where textiles more overtly formed the basis of contemporary
+electronic technology [@kurbak_stitching_2018]. Works produced from
+this project include the "Embroidered Computer" with Irene Posch and
+collaborators, a working 8-bit computer embroidered in gold. This work
+integrates textile electromechanical relays into a fabric,
+demonstrating that a feminist approach to linking textiles with
+computing goes far beyond metaphor - textiles can compute.
 
 # Setting aside the Jacquard machine
 
@@ -64,6 +85,7 @@ be individually picked from software. First I explain the technology
 of the warp-weighted loom, and later explain the electro-mechanical
 attachments on the live loom.
 
+
 The primary purpose of any loom is to hold a group of parallel
 threads, the *warp*, in parallel and under tension, allowing *weft*
 threads to be woven over and under the warp threads. The warp-weighted
@@ -82,50 +104,67 @@ complex structures on it.
 
 \centering
 
-![](plain-draft.png){width=25%}
-![](twill-draft.png){width=25%}
-![](satin-draft.png){width=25%}\
-![](plain-weave-a.png){width=25%}
-![](twill-weave-a.png){width=25%}
-![](satin-weave-a.png){width=25%}\
-![](plain-weave-b.png){width=25%}
-![](twill-weave-b.png){width=25%}
-![](satin-weave-b.png){width=25%}
-
 \begin{figure}[!h]
-\hspace{0.10\textwidth}
-\begin{subfigure}[t]{0.25\textwidth}
-\caption{Tabby/plain weave}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{plain-draft.png}
 \end{subfigure}
-\begin{subfigure}[t]{0.25\textwidth}
-\caption{3-1 twill weave}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{twill-draft.png}
 \end{subfigure}
-\begin{subfigure}[t]{0.25\textwidth}
-\caption{Satin weave}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{satin-draft.png}
 \end{subfigure}
-\caption{Fundamental weave structures, shown with binary 'draft' structure (top), simulated weave with light warp and dark weft (middle), and simulated weave with alternating light and dark warp and weft (bottom). These different structures lead to different physical properties and therefore uses [@Emery].}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{plain-weave-a.png}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{twill-weave-a.png}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{satin-weave-a.png}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{plain-weave-b.png}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{twill-weave-b.png}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{satin-weave-b.png}
+\end{subfigure}
+
+\caption{\label{fundamental}Fundamental weave structures, shown with binary 'draft' structure (top), simulated weave with light warp and dark weft (middle), and simulated weave with alternating light and dark warp and weft (bottom). These different structures lead to different physical properties and therefore uses (Emery, 2009).}
 \end{figure}
+
 
 \flushleft
 
 The weaving process involves a weft thread going over and under the
 warp threads, following one of a very large range of possible
-patterns, for example creating tabby, twill or satin structures (see
-Fig. xxx). Selective warp threads are pulled forward, creating a new
-gap or shed between the pulled and non-pulled warp threads, through
-which the weft travels in a straight line. When the warp threads are
-returned, the weft is trapped inside, and the next shed is prepared.
+patterns, for example creating tabby, twill or satin structures
+([@emery_primary_2009], see also Fig. \ref{fundamental}). Selective
+warp threads are pulled forward, creating a new gap or shed between
+the pulled and non-pulled warp threads, through which the weft travels
+in a straight line. When the warp threads are returned, the weft is
+trapped inside, and the next shed is prepared.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.48\textwidth]{wwl.png}
+\end{center}
+\caption{\label{liveloom}The Live Loom, a warp-weighted loom, with live-codable heddles via solenoid actuators.}
+\end{figure}
 
 ## Weaving technology
 
-The Live Loom is shown in Figure xxx. Although it carries a
+The Live Loom is shown in Figure \ref{liveloom}. Although it carries a
 contemporary 'maker' aesthetic due to its lasercut plywood
 construction, at its core, it is a handloom following an ancient
 warp-weighted loom design. The additional electro-mechanical parts do
 not replace the core functions of the loom, but rather augment them in
 order to allow threads to be selected using a computer language as
 well as directly by hand. The hardware and software design are
-available as open hardware/free software [@ref-the-code].
+available as open hardware/free software [@alex_mclean_kairotic/liveloom:_2019].
 
 The live loom is fitted with a number of solenoids (currently
 sixteen), mounted on two axes to double the number that could
@@ -146,12 +185,12 @@ thread. This is particularly useful at the edges of the weave, where
 adjustments are often required to produce a good fabric. 
 
 The suggestive nature of instructions sent via the solenoids reminds
-of the live coding choreographic work of Sicchio (xxx). We can think
-of this process as not directly live coding a textile weave, but
-instead suggesting bodily movements to produce the weave. When live
-coding people rather than computers, it is humane to respect their
-ability to exercise creativity and agency in the way they interpret
-instructions given to them.
+of the live coding choreographic work of @Sicchio14. We can think of
+this process as not directly live coding a textile weave, but instead
+suggesting bodily movements to produce the weave. When live coding
+people rather than computers, it is humane to respect their ability to
+exercise creativity and agency in the way they interpret instructions
+given to them.
 
 # Computing a weave
 
@@ -169,11 +208,11 @@ systems, creating a deterministic, logical outcome that is nonetheless
 very difficult for the layperson to predict.
 
 As a simple example of this, consider the weave structure shown in
-Fig. 1(a), known as a draft pattern.  The central black-and-white grid
-shows the pattern of weft ups and downs represented as white and black
-squares respectively. For example, the first row shows a weft thread
-going under one warp, over two warps, and repeat. The second row shows
-a weft thread going under two warps, over one warp, and then
+Fig. \ref{draft}, known as a draft pattern.  The central black-and-white
+grid shows the pattern of weft ups and downs represented as white and
+black squares respectively. For example, the first row shows a weft
+thread going under one warp, over two warps, and repeat. The second
+row shows a weft thread going under two warps, over one warp, and then
 repeating.
 
 There are also coloured squares at the top and bottom, showing the
@@ -193,23 +232,27 @@ of the upper and lower structures.
 
 \centering
 
-![](draft.png){width=40%}
-![](draft-out.png){width=40%}
+![](draft.png){width=33%}
+![](draft-out.png){width=33%}
+![](weave-diagonal.jpg){width=33%}
 \begin{figure}[!h]
 
-\hspace{0.1\textwidth}\begin{subfigure}[t]{0.4\textwidth}
-\caption{Draft pattern}
+\begin{subfigure}[t]{0.333\textwidth}
+\caption{\label{draft}Draft pattern}
 \end{subfigure}
-\begin{subfigure}[t]{0.4\textwidth}
-\caption{Result}
+\begin{subfigure}[t]{0.333\textwidth}
+\caption{\label{result}Result}
 \end{subfigure}
-\caption{A draft pattern and the visual result of virtually weaving it.}
+\begin{subfigure}[t]{0.333\textwidth}
+\caption{\label{actual-result}Actual result}
+\end{subfigure}
+\caption{\label{draft-result}A draft pattern and the result of virtually and actually weaving it.}
 \end{figure}
 
 \flushleft
 
 If we plot out the result of this interference between thread colour
-and weave structure, we arrive at the image shown in Fig. 1(b). This
+and weave structure, we arrive at the image shown in Fig. \ref{result}. This
 result will be surprising to a layperson, not only is the vertical and
 horizontal stripe of warp and weft not visible, but the diagonal runs
 in a different direction to the underlying weave structure. This
@@ -217,21 +260,18 @@ experience will be familiar to those who have explored algorithmic
 interference patterns in livecoding software such as TidalCycles or
 Hydra, simple inputs often create unexpected, more complex results.
 
-![](weave-diagonal.png){width=50%}
-
-
-Finally, Fig. xxx shows a fabric woven using this structure and
-alternating white and blue threads, created on the live loom. The
-same features hold in the weave itself, although are not too well
-defined, due to interaction between the threads, and variation in
-density. The left and right edges are a mess, because in practice such
-a structure simply cannot be woven at the edges. Weft threads
-generally travel from left to right for one row, and from right to
-left on the next. Therefore, if a weft ends a row over a warp, and
-begins the next row also over a warp, then it will not be woven at
-that point. A more experienced weaver would make consistent changes at
-the edges (known as the *selvage*), such as adding some rows of plain
-weave, to ensure a coherent result.
+Finally, Fig. \ref{actual-result} shows a fabric woven using this
+structure and alternating white and blue threads, created by a
+workshop visitor on the live loom. The same features hold in the weave
+itself, although are not too well defined, due to interaction between
+the threads, and variation in density. The left and right edges are a
+mess, because in practice such a structure simply cannot be woven at
+the edges. Weft threads generally travel from left to right for one
+row, and from right to left on the next. Therefore, if a weft ends a
+row over a warp, and begins the next row also over a warp, then it
+will not be woven at that point. A more experienced weaver would make
+consistent changes at the edges (known as the *selvage*), such as
+adding some rows of plain weave, to ensure a coherent result.
 
 The above description of colour and weave effects should give us pause
 for thought. Weaving predates computer programming and indeed discrete
@@ -259,7 +299,7 @@ the material, but just as live coding of music brings together the
 experience of coding and listening, the live loom brings together
 coding with seeing and touching.
 
-Fig xxx. shows the current version of the live loom coding
+Fig \ref{screenshots}. shows the current version of the live loom coding
 interface. The code is shown on the left, using the visual live coding
 interface Texture [@McLean11], originally designed as an exploratory
 interface for the TidalCycles environment, but here repurposed for a
@@ -326,19 +366,31 @@ results from simple elements.
 
 # Working at the Live Loom
 
-Figure xxx shows the live loom software interface next to the woven
-outcome. This starkly shows the perceptual gap between code, draft and
-weave, with little visual correspondance despite the structures of the
-draft being a logical outcome from the code, and the weave being that
-of the draft. The code is represented as a branching tree, the visual
-interface directly showing the branching normally represented by
-parenthesis [@McLean11]. This particular code creates the draft
-pattern shown, which perhaps has the appearance of vines growing up a
-wall. When this structure interferes with the alternating colours of
-warp and weft, the final result appears in the weave as (to my eyes)
-legs leaping into the air.
+Figure \ref{caroline-draft} shows the live loom software interface
+next to the woven outcome. This starkly shows the perceptual gap
+between code, draft and weave, with little visual correspondance
+despite the structures of the draft being a logical outcome from the
+code, and the weave being that of the draft. The code is represented
+as a branching tree, the visual interface directly showing the
+branching normally represented by parenthesis [@McLean11]. This
+particular code creates the draft pattern shown, which perhaps has the
+appearance of vines growing up a wall. When this structure interferes
+with the alternating colours of warp and weft, the final result
+appears in the weave as (to my eyes) legs leaping into the air
+(Fig. \ref{caroline-result}).
 
-![](caroline.png){width=40%}
+\begin{figure}[!h]
+
+\begin{subfigure}[t]{0.692\textwidth}
+\includegraphics{caroline-draft.png}
+\caption{\label{caroline-draft}Code (left) and resulting draft structure (bottom right)}
+\end{subfigure}
+\begin{subfigure}[t]{0.308\textwidth}
+\includegraphics{caroline.png}
+\caption{\label{caroline-result}Resulting weave}
+\end{subfigure}
+\caption{Live loom software interface and the woven result}
+\end{figure}
 
 It is humbling that this logical leap from draft to weave constitutes
 ancient knowledge, demonstrating mathematical logic while predating
@@ -442,40 +494,75 @@ to becoming an experienced weaver, and I have far to go.
 ## Weaving the edit
 
 Decisions at the live loom are taken slowly, responding to problems
-and opportunities as they arise in the weave. Figure X shows the
-starting point for another improvised weave, a draft appearing to be a
-kind of hatched vertical pattern, drifting to the left, with lines
-sometimes joining or breaking. When it came to weaving this structure,
-two features slowly became apparent -- the pervasive pairs of ups and
-downs on the weft, offset from one row to the next, seemed to result
-in the warp spreading out vertically, and therefore partially hiding
-the warp at points where I expected it to be visible. This created an
-a partly *weft-faced* weave. However, some long floating threads were
-present on the warp direction, and the weft-facing only accentuated
-the presence of these long warps lying on top.
+and opportunities as they arise in the weave. Figure
+\ref{screenshots}(a) shows the starting point for another improvised
+weave, a draft appearing to be a kind of hatched vertical pattern,
+drifting to the left, with lines sometimes joining or breaking. When
+it came to weaving this structure, two features slowly became apparent
+-- the pervasive pairs of ups and downs on the weft, offset from one
+row to the next, seemed to result in the warp spreading out
+vertically, and therefore partially hiding the warp at points where I
+expected it to be visible. This created an a partly *weft-faced*
+weave. However, some long floating threads were present on the warp
+direction, and the weft-facing only accentuated the presence of these
+long warps lying on top.
+
+
+\begin{figure}[!h]
+
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{improv-a.png}
+\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{improv-b.png}
+\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{improv-c.png}
+\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{improv-d.png}
+\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{improv-e.png}
+\caption{}
+\end{subfigure}
+\begin{subfigure}[t]{0.33\textwidth}
+\includegraphics{improv-f.png}
+\caption{}
+\end{subfigure}
+
+\caption{\label{screenshots}Screenshots of Live Loom interface at six different points in the weaving of fabric (see Fig. xxx).}
+\end{figure}
+
 
 After weaving 20 rows of this pattern, I hit a snag - the pattern of
 repeating warp floats drifted until they sat at both edges of the
-fabric (Fig. xxx). I realised that having floats at the selvage would
-cause the textile to lose its otherwise uniform width, and I decided I
-neither wanted this effect or to change it by hand; I had been
-enjoying working the two wefts together at the selvage, and felt that
-having a warp float there would create a mess. So instead I changed
-the pattern, adding code to invert every other row, as an effort to
-break up warp floats. However, after a few rows of weaving the edit, I
+fabric, seen in Fig. \ref{screenshots}(b). I realised that having floats at the
+selvage would cause the textile to lose its otherwise uniform width,
+and I decided I neither wanted this effect or to change it by hand; I
+had been enjoying working the two wefts together at the selvage, and
+felt that having a warp float there would create a mess. So instead I
+changed the structure to that seen in \ref{screenshots}(c), adding code to invert
+every other row, as an effort to break up warp floats. However, after
+a few rows of weaving the edit to the point shown in Fig. \ref{screenshots}(d), I
 realised that by breaking up some floats, I had only created new
-ones. Another tweak, this time changing a number from 3 to 1, seemed
-to fix it. However once I started weaving I realised the floats were
-still there, but now so long that they took up the whole edge and so
-were no longer visible on-screen.
+ones. Another tweak shown in Fig. \ref{screenshots}(e), this time changing a number
+from \ref{screenshots} to 1, seemed to fix it. However once I started weaving I
+realised the floats were still there, but now so long that they took
+up the whole edge and so were no longer visible on-screen.
 
 This time I decided having such long floats was an interesting enough
 challenge to pursue, and embraced this compounded error as an
 opportunity to experiment more with creating extra binding points at
-the selvage by hand. The results did indeed turn out to be
-interesting, the resulting weave curiously appearing to be much more
-uniform than the draft pattern. As the long threads stepped one warp
-to the left, they cycled between white and blue, over a steep
+the selvage by hand. I continued with this structure for 53 rows, up
+until the point seen in Fig. \ref{screenshots}(f).  The results did indeed turn out to
+be interesting, the resulting weave curiously appearing to be much
+more uniform than the draft pattern. As the long threads stepped one
+warp to the left, they cycled between white and blue, over a steep
 diagonal. This time, the resulting motif reminded me of quipu knots.
 
 The resulting experimental weave charts an experiment in three
@@ -494,15 +581,16 @@ craft of handweaving has potential to support and extend a somewhat
 obscured feminist history of computation. Feminist perspectives on
 computing and weaving hardly new, a well-known reference point being
 Sadie Plant's influential text "Zeros and Ones: Digital Women and the
-New Technoculture" [@Plant1998]. However, the once dominant role of
-women in computer programming has been steadily erased since the 1960s
-and '70s [@Hicks2017], and despire recent efforts, gender diversity in
-software engineering is an ongoing problem. 
+New Technoculture" [@plant_zeros_1998]. However, the once dominant
+role of women in computer programming has been steadily erased since
+the 1960s and '70s [@hicks_programmed_2017], and despire recent
+efforts, gender diversity in software engineering is an ongoing
+problem.
 
 As a relatively new interdisciplinary practice, live coding offers an
 opportunity to build a gender diverse culture, and this opportunity is a
 core topic across live coding research and practice
-[@Armitage2018]. Turkle and Papert related gender to the plurality of
+[@armitage_spaces_2018]. Turkle and Papert related gender to the plurality of
 relationships between coder and program observed in children,
 describing a more conversational approach to coding, with mid-course
 corrections rather than fixed-goals as *bricolage* [@Turkle90,
@@ -510,12 +598,12 @@ p. 136]. This approach is certainly evocative of live coding, with the
 suggestion being that it is one likely to be favoured by girls, but
 discouraged by instructors in favour of more fixed design processes.
 
-@Armitage2018 brings together female perspectives on live coding in
+@armitage_spaces_2018 brings together female perspectives on live coding in
 the Algorave scene, relating one interviewee's experience of live coding
 "... as a way of working through their daily life, adding structures
 to it and providing functions for being. These lived patterns merge
 with their daydreams and expressions of colour and geometry to form
-her live coded visuals." (Armitage, xxx, p. 39). This again evokes
+her live coded visuals." [@armitage_spaces_2018, p. 39]. This again evokes
 Turkle and Papert's bricoleur, and indeed the social and intellectual
 function of weaving in building a personal cosmos.^[https://penelope.hypotheses.org/1400]
 
@@ -534,3 +622,4 @@ movement from the code to the weaver, the live loom allows creative
 exploration of woven patterns in a way that is sympathetic to the
 repetitive, yet cognitive nature of handweaving.
 
+# References
