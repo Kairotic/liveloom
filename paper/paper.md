@@ -632,14 +632,15 @@ p. 136]. This approach is certainly evocative of live coding, with the
 suggestion being that it is one likely to be favoured by girls, but
 discouraged by instructors in favour of more fixed design processes.
 
-@armitage_spaces_2018 brings together female perspectives on live coding in
-the Algorave scene, relating one interviewee's experience of live coding
-"... as a way of working through their daily life, adding structures
-to it and providing functions for being. These lived patterns merge
-with their daydreams and expressions of colour and geometry to form
-her live coded visuals." [@armitage_spaces_2018, p. 39]. This again evokes
-Turkle and Papert's bricoleur, and indeed the social and intellectual
-function of weaving in building a personal cosmos.^[https://penelope.hypotheses.org/1400]
+@armitage_spaces_2018 brings together female perspectives on live
+coding in the Algorave scene, relating one interviewee's experience of
+live coding "... as a way of working through their daily life, adding
+structures to it and providing functions for being. These lived
+patterns merge with their daydreams and expressions of colour and
+geometry to form her live coded visuals." [@armitage_spaces_2018,
+p. 39]. This again evokes Turkle and Papert's bricoleur, and indeed
+the social and intellectual function of weaving in building a personal
+cosmos [@harlizius_kluck_ellen_2017_840005].
 
 # Conclusion
 
