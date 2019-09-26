@@ -1,7 +1,7 @@
 % The Live Loom
 
 ---
-author: Removed for peer review
+author: Author details emoved for peer review
 header-includes: |
     \usepackage{caption}
     \usepackage{subcaption}
