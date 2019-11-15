@@ -1,7 +1,9 @@
 % The Live Loom
 
 ---
-author: Author details emoved for peer review
+author: Alex McLean
+institution: Research Institute for the History of Science and Technology, Deutsches Museum
+email: alex@slab.org
 header-includes: |
     \usepackage{caption}
     \usepackage{subcaption}
@@ -43,8 +45,6 @@ both for understanding weaving and reflecting on the shared history of
 live coding and textile practice that it might reveal.
 
 # Background
-
-*Paragraph removed for peer review*.
 
 The connection between textile craft and computation has been very
 well explored in the digital arts and beyond. However, as David
@@ -700,6 +700,6 @@ explore the complexities and possibilities of handweaving.
 
 # Acknowledgements
 
-Removed for peer review.
+This research is conducted by the PENELOPE project, with funding from the European Research Council (ERC) under the Horizon 2020 research and innovation programme of the European Union, grant agreement No 682711.
 
 # References
