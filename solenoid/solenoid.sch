@@ -1,0 +1,1342 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:Earth #PWR0101
+U 1 1 603FFA1C
+P 3100 750
+F 0 "#PWR0101" H 3100 500 50  0001 C CNN
+F 1 "Earth" H 3100 600 50  0001 C CNN
+F 2 "" H 3100 750 50  0001 C CNN
+F 3 "~" H 3100 750 50  0001 C CNN
+	1    3100 750 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0102
+U 1 1 60400AFC
+P 3500 750
+F 0 "#PWR0102" H 3500 600 50  0001 C CNN
+F 1 "+12V" H 3515 923 50  0000 C CNN
+F 2 "" H 3500 750 50  0001 C CNN
+F 3 "" H 3500 750 50  0001 C CNN
+	1    3500 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 6750 2800 6750
+Wire Wire Line
+	3100 6450 3100 6550
+Wire Wire Line
+	3100 6950 3500 6950
+Connection ~ 3500 6950
+Wire Wire Line
+	3500 6950 3900 6950
+$Comp
+L power:+12V #PWR0103
+U 1 1 6044C376
+P 3500 6450
+F 0 "#PWR0103" H 3500 6300 50  0001 C CNN
+F 1 "+12V" H 3515 6623 50  0000 C CNN
+F 2 "" H 3500 6450 50  0001 C CNN
+F 3 "" H 3500 6450 50  0001 C CNN
+	1    3500 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0104
+U 1 1 6044C36C
+P 3100 6450
+F 0 "#PWR0104" H 3100 6200 50  0001 C CNN
+F 1 "Earth" H 3100 6300 50  0001 C CNN
+F 2 "" H 3100 6450 50  0001 C CNN
+F 3 "~" H 3100 6450 50  0001 C CNN
+	1    3100 6450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 6850 3500 6950
+$Comp
+L Device:R R8
+U 1 1 6044C361
+P 2600 6750
+F 0 "R8" V 2393 6750 50  0000 C CNN
+F 1 "2.2K" V 2484 6750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2530 6750 50  0001 C CNN
+F 3 "~" H 2600 6750 50  0001 C CNN
+	1    2600 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D8
+U 1 1 6044C357
+P 3500 6700
+F 0 "D8" V 3454 6780 50  0000 L CNN
+F 1 "1N4007" V 3545 6780 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 6525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 6700 50  0001 C CNN
+	1    3500 6700
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q8
+U 1 1 6044C34D
+P 3000 6750
+F 0 "Q8" H 3207 6704 50  0000 L CNN
+F 1 "TIP120" H 3207 6795 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 6675 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 3000 6750 50  0001 L CNN
+	1    3000 6750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2750 5900 2800 5900
+Wire Wire Line
+	3100 5600 3100 5700
+Wire Wire Line
+	3100 6100 3500 6100
+Connection ~ 3500 6100
+Wire Wire Line
+	3500 6100 3900 6100
+$Comp
+L power:+12V #PWR0105
+U 1 1 6044C32F
+P 3500 5600
+F 0 "#PWR0105" H 3500 5450 50  0001 C CNN
+F 1 "+12V" H 3515 5773 50  0000 C CNN
+F 2 "" H 3500 5600 50  0001 C CNN
+F 3 "" H 3500 5600 50  0001 C CNN
+	1    3500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0106
+U 1 1 6044C325
+P 3100 5600
+F 0 "#PWR0106" H 3100 5350 50  0001 C CNN
+F 1 "Earth" H 3100 5450 50  0001 C CNN
+F 2 "" H 3100 5600 50  0001 C CNN
+F 3 "~" H 3100 5600 50  0001 C CNN
+	1    3100 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 6000 3500 6100
+$Comp
+L Device:R R7
+U 1 1 6044C31A
+P 2600 5900
+F 0 "R7" V 2393 5900 50  0000 C CNN
+F 1 "2.2K" V 2484 5900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2530 5900 50  0001 C CNN
+F 3 "~" H 2600 5900 50  0001 C CNN
+	1    2600 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D7
+U 1 1 6044C310
+P 3500 5850
+F 0 "D7" V 3454 5930 50  0000 L CNN
+F 1 "1N4007" V 3545 5930 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 5675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 5850 50  0001 C CNN
+	1    3500 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q7
+U 1 1 6044C306
+P 3000 5900
+F 0 "Q7" H 3207 5854 50  0000 L CNN
+F 1 "TIP120" H 3207 5945 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 5825 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 3000 5900 50  0001 L CNN
+	1    3000 5900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2750 5100 2800 5100
+Wire Wire Line
+	3100 4800 3100 4900
+Wire Wire Line
+	3100 5300 3500 5300
+Connection ~ 3500 5300
+Wire Wire Line
+	3500 5300 3900 5300
+$Comp
+L power:+12V #PWR0107
+U 1 1 6044C2E8
+P 3500 4800
+F 0 "#PWR0107" H 3500 4650 50  0001 C CNN
+F 1 "+12V" H 3515 4973 50  0000 C CNN
+F 2 "" H 3500 4800 50  0001 C CNN
+F 3 "" H 3500 4800 50  0001 C CNN
+	1    3500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0108
+U 1 1 6044C2DE
+P 3100 4800
+F 0 "#PWR0108" H 3100 4550 50  0001 C CNN
+F 1 "Earth" H 3100 4650 50  0001 C CNN
+F 2 "" H 3100 4800 50  0001 C CNN
+F 3 "~" H 3100 4800 50  0001 C CNN
+	1    3100 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 5200 3500 5300
+$Comp
+L Device:R R6
+U 1 1 6044C2D3
+P 2600 5100
+F 0 "R6" V 2393 5100 50  0000 C CNN
+F 1 "2.2K" V 2484 5100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2530 5100 50  0001 C CNN
+F 3 "~" H 2600 5100 50  0001 C CNN
+	1    2600 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D6
+U 1 1 6044C2C9
+P 3500 5050
+F 0 "D6" V 3454 5130 50  0000 L CNN
+F 1 "1N4007" V 3545 5130 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 4875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 5050 50  0001 C CNN
+	1    3500 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q6
+U 1 1 6044C2BF
+P 3000 5100
+F 0 "Q6" H 3207 5054 50  0000 L CNN
+F 1 "TIP120" H 3207 5145 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 5025 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 3000 5100 50  0001 L CNN
+	1    3000 5100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2750 4300 2800 4300
+Wire Wire Line
+	3100 4000 3100 4100
+Wire Wire Line
+	3100 4500 3500 4500
+Connection ~ 3500 4500
+Wire Wire Line
+	3500 4500 3900 4500
+$Comp
+L power:+12V #PWR0109
+U 1 1 6044C2A1
+P 3500 4000
+F 0 "#PWR0109" H 3500 3850 50  0001 C CNN
+F 1 "+12V" H 3515 4173 50  0000 C CNN
+F 2 "" H 3500 4000 50  0001 C CNN
+F 3 "" H 3500 4000 50  0001 C CNN
+	1    3500 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0110
+U 1 1 6044C297
+P 3100 4000
+F 0 "#PWR0110" H 3100 3750 50  0001 C CNN
+F 1 "Earth" H 3100 3850 50  0001 C CNN
+F 2 "" H 3100 4000 50  0001 C CNN
+F 3 "~" H 3100 4000 50  0001 C CNN
+	1    3100 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 4400 3500 4500
+$Comp
+L Device:R R5
+U 1 1 6044C28C
+P 2600 4300
+F 0 "R5" V 2393 4300 50  0000 C CNN
+F 1 "2.2K" V 2484 4300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2530 4300 50  0001 C CNN
+F 3 "~" H 2600 4300 50  0001 C CNN
+	1    2600 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D5
+U 1 1 6044C282
+P 3500 4250
+F 0 "D5" V 3454 4330 50  0000 L CNN
+F 1 "1N4007" V 3545 4330 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 4075 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 4250 50  0001 C CNN
+	1    3500 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q5
+U 1 1 6044BEE8
+P 3000 4300
+F 0 "Q5" H 3207 4254 50  0000 L CNN
+F 1 "TIP120" H 3207 4345 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 4225 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 3000 4300 50  0001 L CNN
+	1    3000 4300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2750 3500 2800 3500
+Wire Wire Line
+	3100 3200 3100 3300
+Wire Wire Line
+	3100 3700 3500 3700
+Connection ~ 3500 3700
+Wire Wire Line
+	3500 3700 3900 3700
+$Comp
+L power:+12V #PWR0111
+U 1 1 6043BAEC
+P 3500 3200
+F 0 "#PWR0111" H 3500 3050 50  0001 C CNN
+F 1 "+12V" H 3515 3373 50  0000 C CNN
+F 2 "" H 3500 3200 50  0001 C CNN
+F 3 "" H 3500 3200 50  0001 C CNN
+	1    3500 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0112
+U 1 1 6043BAE2
+P 3100 3200
+F 0 "#PWR0112" H 3100 2950 50  0001 C CNN
+F 1 "Earth" H 3100 3050 50  0001 C CNN
+F 2 "" H 3100 3200 50  0001 C CNN
+F 3 "~" H 3100 3200 50  0001 C CNN
+	1    3100 3200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 3600 3500 3700
+$Comp
+L Device:R R4
+U 1 1 6043BAD7
+P 2600 3500
+F 0 "R4" V 2393 3500 50  0000 C CNN
+F 1 "2.2K" V 2484 3500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2530 3500 50  0001 C CNN
+F 3 "~" H 2600 3500 50  0001 C CNN
+	1    2600 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D4
+U 1 1 6043BACD
+P 3500 3450
+F 0 "D4" V 3454 3530 50  0000 L CNN
+F 1 "1N4007" V 3545 3530 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 3275 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 3450 50  0001 C CNN
+	1    3500 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q4
+U 1 1 6043B7EB
+P 3000 3500
+F 0 "Q4" H 3207 3454 50  0000 L CNN
+F 1 "TIP120" H 3207 3545 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 3425 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 3000 3500 50  0001 L CNN
+	1    3000 3500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2750 2650 2800 2650
+Wire Wire Line
+	3100 2350 3100 2450
+Wire Wire Line
+	3100 2850 3500 2850
+Connection ~ 3500 2850
+Wire Wire Line
+	3500 2850 3900 2850
+$Comp
+L power:+12V #PWR0113
+U 1 1 60419C82
+P 3500 2350
+F 0 "#PWR0113" H 3500 2200 50  0001 C CNN
+F 1 "+12V" H 3515 2523 50  0000 C CNN
+F 2 "" H 3500 2350 50  0001 C CNN
+F 3 "" H 3500 2350 50  0001 C CNN
+	1    3500 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0114
+U 1 1 60419C78
+P 3100 2350
+F 0 "#PWR0114" H 3100 2100 50  0001 C CNN
+F 1 "Earth" H 3100 2200 50  0001 C CNN
+F 2 "" H 3100 2350 50  0001 C CNN
+F 3 "~" H 3100 2350 50  0001 C CNN
+	1    3100 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 2750 3500 2850
+$Comp
+L Device:R R3
+U 1 1 60419C6D
+P 2600 2650
+F 0 "R3" V 2393 2650 50  0000 C CNN
+F 1 "2.2K" V 2484 2650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2530 2650 50  0001 C CNN
+F 3 "~" H 2600 2650 50  0001 C CNN
+	1    2600 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D3
+U 1 1 60419C63
+P 3500 2600
+F 0 "D3" V 3454 2680 50  0000 L CNN
+F 1 "1N4007" V 3545 2680 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 2425 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 2600 50  0001 C CNN
+	1    3500 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q3
+U 1 1 60419A39
+P 3000 2650
+F 0 "Q3" H 3207 2604 50  0000 L CNN
+F 1 "TIP120" H 3207 2695 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 2575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 3000 2650 50  0001 L CNN
+	1    3000 2650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2750 1850 2800 1850
+Wire Wire Line
+	3100 1550 3100 1650
+Wire Wire Line
+	3100 2050 3500 2050
+Connection ~ 3500 2050
+Wire Wire Line
+	3500 2050 3900 2050
+$Comp
+L power:+12V #PWR0115
+U 1 1 60413433
+P 3500 1550
+F 0 "#PWR0115" H 3500 1400 50  0001 C CNN
+F 1 "+12V" H 3515 1723 50  0000 C CNN
+F 2 "" H 3500 1550 50  0001 C CNN
+F 3 "" H 3500 1550 50  0001 C CNN
+	1    3500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0116
+U 1 1 60413429
+P 3100 1550
+F 0 "#PWR0116" H 3100 1300 50  0001 C CNN
+F 1 "Earth" H 3100 1400 50  0001 C CNN
+F 2 "" H 3100 1550 50  0001 C CNN
+F 3 "~" H 3100 1550 50  0001 C CNN
+	1    3100 1550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 1950 3500 2050
+$Comp
+L Device:R R2
+U 1 1 6041341E
+P 2600 1850
+F 0 "R2" V 2393 1850 50  0000 C CNN
+F 1 "2.2K" V 2484 1850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2530 1850 50  0001 C CNN
+F 3 "~" H 2600 1850 50  0001 C CNN
+	1    2600 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D2
+U 1 1 60413414
+P 3500 1800
+F 0 "D2" V 3454 1880 50  0000 L CNN
+F 1 "1N4007" V 3545 1880 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 1625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 1800 50  0001 C CNN
+	1    3500 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q2
+U 1 1 604132A2
+P 3000 1850
+F 0 "Q2" H 3207 1804 50  0000 L CNN
+F 1 "TIP120" H 3207 1895 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 1775 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 3000 1850 50  0001 L CNN
+	1    3000 1850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2750 1050 2800 1050
+Wire Wire Line
+	3100 750  3100 850 
+Wire Wire Line
+	3100 1250 3500 1250
+Connection ~ 3500 1250
+Wire Wire Line
+	3500 1250 3900 1250
+Wire Wire Line
+	3500 1150 3500 1250
+$Comp
+L Device:R R1
+U 1 1 603FDD04
+P 2600 1050
+F 0 "R1" V 2393 1050 50  0000 C CNN
+F 1 "2.2K" V 2484 1050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2530 1050 50  0001 C CNN
+F 3 "~" H 2600 1050 50  0001 C CNN
+	1    2600 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D1
+U 1 1 603FD258
+P 3500 1000
+F 0 "D1" V 3454 1080 50  0000 L CNN
+F 1 "1N4007" V 3545 1080 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3500 825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3500 1000 50  0001 C CNN
+	1    3500 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q1
+U 1 1 603FBCB4
+P 3000 1050
+F 0 "Q1" H 3207 1004 50  0000 L CNN
+F 1 "TIP120" H 3207 1095 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 975 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 3000 1050 50  0001 L CNN
+	1    3000 1050
+	1    0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0117
+U 1 1 604AD474
+P 5150 800
+F 0 "#PWR0117" H 5150 550 50  0001 C CNN
+F 1 "Earth" H 5150 650 50  0001 C CNN
+F 2 "" H 5150 800 50  0001 C CNN
+F 3 "~" H 5150 800 50  0001 C CNN
+	1    5150 800 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0118
+U 1 1 604ADAB6
+P 5550 800
+F 0 "#PWR0118" H 5550 650 50  0001 C CNN
+F 1 "+12V" H 5565 973 50  0000 C CNN
+F 2 "" H 5550 800 50  0001 C CNN
+F 3 "" H 5550 800 50  0001 C CNN
+	1    5550 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 6800 4850 6800
+Wire Wire Line
+	5150 6500 5150 6600
+Wire Wire Line
+	5150 7000 5550 7000
+Connection ~ 5550 7000
+Wire Wire Line
+	5550 7000 5950 7000
+$Comp
+L power:+12V #PWR0119
+U 1 1 604ADAD4
+P 5550 6500
+F 0 "#PWR0119" H 5550 6350 50  0001 C CNN
+F 1 "+12V" H 5565 6673 50  0000 C CNN
+F 2 "" H 5550 6500 50  0001 C CNN
+F 3 "" H 5550 6500 50  0001 C CNN
+	1    5550 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0120
+U 1 1 604ADADE
+P 5150 6500
+F 0 "#PWR0120" H 5150 6250 50  0001 C CNN
+F 1 "Earth" H 5150 6350 50  0001 C CNN
+F 2 "" H 5150 6500 50  0001 C CNN
+F 3 "~" H 5150 6500 50  0001 C CNN
+	1    5150 6500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 6900 5550 7000
+$Comp
+L Device:R R16
+U 1 1 604ADAE9
+P 4650 6800
+F 0 "R16" V 4443 6800 50  0000 C CNN
+F 1 "2.2K" V 4534 6800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4580 6800 50  0001 C CNN
+F 3 "~" H 4650 6800 50  0001 C CNN
+	1    4650 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D16
+U 1 1 604ADAF3
+P 5550 6750
+F 0 "D16" V 5504 6830 50  0000 L CNN
+F 1 "1N4007" V 5595 6830 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 6575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 6750 50  0001 C CNN
+	1    5550 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q16
+U 1 1 604ADAFD
+P 5050 6800
+F 0 "Q16" H 5257 6754 50  0000 L CNN
+F 1 "TIP120" H 5257 6845 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 6725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 5050 6800 50  0001 L CNN
+	1    5050 6800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 5950 4850 5950
+Wire Wire Line
+	5150 5650 5150 5750
+Wire Wire Line
+	5150 6150 5550 6150
+Connection ~ 5550 6150
+Wire Wire Line
+	5550 6150 5950 6150
+$Comp
+L power:+12V #PWR0121
+U 1 1 604ADB1B
+P 5550 5650
+F 0 "#PWR0121" H 5550 5500 50  0001 C CNN
+F 1 "+12V" H 5565 5823 50  0000 C CNN
+F 2 "" H 5550 5650 50  0001 C CNN
+F 3 "" H 5550 5650 50  0001 C CNN
+	1    5550 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0122
+U 1 1 604ADB25
+P 5150 5650
+F 0 "#PWR0122" H 5150 5400 50  0001 C CNN
+F 1 "Earth" H 5150 5500 50  0001 C CNN
+F 2 "" H 5150 5650 50  0001 C CNN
+F 3 "~" H 5150 5650 50  0001 C CNN
+	1    5150 5650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 6050 5550 6150
+$Comp
+L Device:R R15
+U 1 1 604ADB30
+P 4650 5950
+F 0 "R15" V 4443 5950 50  0000 C CNN
+F 1 "2.2K" V 4534 5950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4580 5950 50  0001 C CNN
+F 3 "~" H 4650 5950 50  0001 C CNN
+	1    4650 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D15
+U 1 1 604ADB3A
+P 5550 5900
+F 0 "D15" V 5504 5980 50  0000 L CNN
+F 1 "1N4007" V 5595 5980 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 5725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 5900 50  0001 C CNN
+	1    5550 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q15
+U 1 1 604ADB44
+P 5050 5950
+F 0 "Q15" H 5257 5904 50  0000 L CNN
+F 1 "TIP120" H 5257 5995 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 5875 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 5050 5950 50  0001 L CNN
+	1    5050 5950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 5150 4850 5150
+Wire Wire Line
+	5150 4850 5150 4950
+Wire Wire Line
+	5150 5350 5550 5350
+Connection ~ 5550 5350
+Wire Wire Line
+	5550 5350 5950 5350
+$Comp
+L power:+12V #PWR0123
+U 1 1 604ADB62
+P 5550 4850
+F 0 "#PWR0123" H 5550 4700 50  0001 C CNN
+F 1 "+12V" H 5565 5023 50  0000 C CNN
+F 2 "" H 5550 4850 50  0001 C CNN
+F 3 "" H 5550 4850 50  0001 C CNN
+	1    5550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0124
+U 1 1 604ADB6C
+P 5150 4850
+F 0 "#PWR0124" H 5150 4600 50  0001 C CNN
+F 1 "Earth" H 5150 4700 50  0001 C CNN
+F 2 "" H 5150 4850 50  0001 C CNN
+F 3 "~" H 5150 4850 50  0001 C CNN
+	1    5150 4850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 5250 5550 5350
+$Comp
+L Device:R R14
+U 1 1 604ADB77
+P 4650 5150
+F 0 "R14" V 4443 5150 50  0000 C CNN
+F 1 "2.2K" V 4534 5150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4580 5150 50  0001 C CNN
+F 3 "~" H 4650 5150 50  0001 C CNN
+	1    4650 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D14
+U 1 1 604ADB81
+P 5550 5100
+F 0 "D14" V 5504 5180 50  0000 L CNN
+F 1 "1N4007" V 5595 5180 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 4925 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 5100 50  0001 C CNN
+	1    5550 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q14
+U 1 1 604ADB8B
+P 5050 5150
+F 0 "Q14" H 5257 5104 50  0000 L CNN
+F 1 "TIP120" H 5257 5195 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 5075 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 5050 5150 50  0001 L CNN
+	1    5050 5150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 4350 4850 4350
+Wire Wire Line
+	5150 4050 5150 4150
+Wire Wire Line
+	5150 4550 5550 4550
+Connection ~ 5550 4550
+Wire Wire Line
+	5550 4550 5950 4550
+$Comp
+L power:+12V #PWR0125
+U 1 1 604ADBA9
+P 5550 4050
+F 0 "#PWR0125" H 5550 3900 50  0001 C CNN
+F 1 "+12V" H 5565 4223 50  0000 C CNN
+F 2 "" H 5550 4050 50  0001 C CNN
+F 3 "" H 5550 4050 50  0001 C CNN
+	1    5550 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0126
+U 1 1 604ADBB3
+P 5150 4050
+F 0 "#PWR0126" H 5150 3800 50  0001 C CNN
+F 1 "Earth" H 5150 3900 50  0001 C CNN
+F 2 "" H 5150 4050 50  0001 C CNN
+F 3 "~" H 5150 4050 50  0001 C CNN
+	1    5150 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 4450 5550 4550
+$Comp
+L Device:R R13
+U 1 1 604ADBBE
+P 4650 4350
+F 0 "R13" V 4443 4350 50  0000 C CNN
+F 1 "2.2K" V 4534 4350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4580 4350 50  0001 C CNN
+F 3 "~" H 4650 4350 50  0001 C CNN
+	1    4650 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D13
+U 1 1 604ADBC8
+P 5550 4300
+F 0 "D13" V 5504 4380 50  0000 L CNN
+F 1 "1N4007" V 5595 4380 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 4125 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 4300 50  0001 C CNN
+	1    5550 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q13
+U 1 1 604ADBD2
+P 5050 4350
+F 0 "Q13" H 5257 4304 50  0000 L CNN
+F 1 "TIP120" H 5257 4395 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 4275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 5050 4350 50  0001 L CNN
+	1    5050 4350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 3550 4850 3550
+Wire Wire Line
+	5150 3250 5150 3350
+Wire Wire Line
+	5150 3750 5550 3750
+Connection ~ 5550 3750
+Wire Wire Line
+	5550 3750 5950 3750
+$Comp
+L power:+12V #PWR0127
+U 1 1 604ADBF0
+P 5550 3250
+F 0 "#PWR0127" H 5550 3100 50  0001 C CNN
+F 1 "+12V" H 5565 3423 50  0000 C CNN
+F 2 "" H 5550 3250 50  0001 C CNN
+F 3 "" H 5550 3250 50  0001 C CNN
+	1    5550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0128
+U 1 1 604ADBFA
+P 5150 3250
+F 0 "#PWR0128" H 5150 3000 50  0001 C CNN
+F 1 "Earth" H 5150 3100 50  0001 C CNN
+F 2 "" H 5150 3250 50  0001 C CNN
+F 3 "~" H 5150 3250 50  0001 C CNN
+	1    5150 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 3650 5550 3750
+$Comp
+L Device:R R12
+U 1 1 604ADC05
+P 4650 3550
+F 0 "R12" V 4443 3550 50  0000 C CNN
+F 1 "2.2K" V 4534 3550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4580 3550 50  0001 C CNN
+F 3 "~" H 4650 3550 50  0001 C CNN
+	1    4650 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D12
+U 1 1 604ADC0F
+P 5550 3500
+F 0 "D12" V 5504 3580 50  0000 L CNN
+F 1 "1N4007" V 5595 3580 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 3325 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 3500 50  0001 C CNN
+	1    5550 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q12
+U 1 1 604ADC19
+P 5050 3550
+F 0 "Q12" H 5257 3504 50  0000 L CNN
+F 1 "TIP120" H 5257 3595 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 3475 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 5050 3550 50  0001 L CNN
+	1    5050 3550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 2700 4850 2700
+Wire Wire Line
+	5150 2400 5150 2500
+Wire Wire Line
+	5150 2900 5550 2900
+Connection ~ 5550 2900
+Wire Wire Line
+	5550 2900 5950 2900
+$Comp
+L power:+12V #PWR0129
+U 1 1 604ADC37
+P 5550 2400
+F 0 "#PWR0129" H 5550 2250 50  0001 C CNN
+F 1 "+12V" H 5565 2573 50  0000 C CNN
+F 2 "" H 5550 2400 50  0001 C CNN
+F 3 "" H 5550 2400 50  0001 C CNN
+	1    5550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0130
+U 1 1 604ADC41
+P 5150 2400
+F 0 "#PWR0130" H 5150 2150 50  0001 C CNN
+F 1 "Earth" H 5150 2250 50  0001 C CNN
+F 2 "" H 5150 2400 50  0001 C CNN
+F 3 "~" H 5150 2400 50  0001 C CNN
+	1    5150 2400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 2800 5550 2900
+$Comp
+L Device:R R11
+U 1 1 604ADC4C
+P 4650 2700
+F 0 "R11" V 4443 2700 50  0000 C CNN
+F 1 "2.2K" V 4534 2700 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4580 2700 50  0001 C CNN
+F 3 "~" H 4650 2700 50  0001 C CNN
+	1    4650 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D11
+U 1 1 604ADC56
+P 5550 2650
+F 0 "D11" V 5504 2730 50  0000 L CNN
+F 1 "1N4007" V 5595 2730 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 2475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 2650 50  0001 C CNN
+	1    5550 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q11
+U 1 1 604ADC60
+P 5050 2700
+F 0 "Q11" H 5257 2654 50  0000 L CNN
+F 1 "TIP120" H 5257 2745 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 2625 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 5050 2700 50  0001 L CNN
+	1    5050 2700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 1900 4850 1900
+Wire Wire Line
+	5150 1600 5150 1700
+Wire Wire Line
+	5150 2100 5550 2100
+Connection ~ 5550 2100
+Wire Wire Line
+	5550 2100 5950 2100
+$Comp
+L power:+12V #PWR0131
+U 1 1 604ADC7E
+P 5550 1600
+F 0 "#PWR0131" H 5550 1450 50  0001 C CNN
+F 1 "+12V" H 5565 1773 50  0000 C CNN
+F 2 "" H 5550 1600 50  0001 C CNN
+F 3 "" H 5550 1600 50  0001 C CNN
+	1    5550 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0132
+U 1 1 604ADC88
+P 5150 1600
+F 0 "#PWR0132" H 5150 1350 50  0001 C CNN
+F 1 "Earth" H 5150 1450 50  0001 C CNN
+F 2 "" H 5150 1600 50  0001 C CNN
+F 3 "~" H 5150 1600 50  0001 C CNN
+	1    5150 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 2000 5550 2100
+$Comp
+L Device:R R10
+U 1 1 604ADC93
+P 4650 1900
+F 0 "R10" V 4443 1900 50  0000 C CNN
+F 1 "2.2K" V 4534 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4580 1900 50  0001 C CNN
+F 3 "~" H 4650 1900 50  0001 C CNN
+	1    4650 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D10
+U 1 1 604ADC9D
+P 5550 1850
+F 0 "D10" V 5504 1930 50  0000 L CNN
+F 1 "1N4007" V 5595 1930 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 1675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 1850 50  0001 C CNN
+	1    5550 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q10
+U 1 1 604ADCA7
+P 5050 1900
+F 0 "Q10" H 5257 1854 50  0000 L CNN
+F 1 "TIP120" H 5257 1945 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 1825 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 5050 1900 50  0001 L CNN
+	1    5050 1900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4800 1100 4850 1100
+Wire Wire Line
+	5150 800  5150 900 
+Wire Wire Line
+	5150 1300 5550 1300
+Connection ~ 5550 1300
+Wire Wire Line
+	5550 1300 5950 1300
+Wire Wire Line
+	5550 1200 5550 1300
+$Comp
+L Device:R R9
+U 1 1 604ADCC6
+P 4650 1100
+F 0 "R9" V 4443 1100 50  0000 C CNN
+F 1 "2.2K" V 4534 1100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4580 1100 50  0001 C CNN
+F 3 "~" H 4650 1100 50  0001 C CNN
+	1    4650 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D9
+U 1 1 604ADCD0
+P 5550 1050
+F 0 "D9" V 5504 1130 50  0000 L CNN
+F 1 "1N4007" V 5595 1130 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5550 875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5550 1050 50  0001 C CNN
+	1    5550 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q9
+U 1 1 604ADCDA
+P 5050 1100
+F 0 "Q9" H 5257 1054 50  0000 L CNN
+F 1 "TIP120" H 5257 1145 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 1025 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 5050 1100 50  0001 L CNN
+	1    5050 1100
+	1    0    0    1   
+$EndComp
+Text GLabel 2450 1050 0    50   Input ~ 0
+D1
+Text GLabel 2450 1850 0    50   Input ~ 0
+D2
+Text GLabel 2450 2650 0    50   Input ~ 0
+D3
+Text GLabel 1000 3550 0    50   Input ~ 0
+D5
+Text GLabel 1500 3550 2    50   Input ~ 0
+D14
+Text GLabel 2450 3500 0    50   Input ~ 0
+D4
+Text GLabel 2450 4300 0    50   Input ~ 0
+D5
+Text GLabel 2450 5100 0    50   Input ~ 0
+D6
+Text GLabel 2450 5900 0    50   Input ~ 0
+D7
+Text GLabel 2450 6750 0    50   Input ~ 0
+D8
+Wire Wire Line
+	3500 750  3500 850 
+Text GLabel 3900 1250 2    50   Input ~ 0
+S1
+Wire Wire Line
+	3500 1550 3500 1650
+Text GLabel 3900 2050 2    50   Input ~ 0
+S2
+Wire Wire Line
+	3500 2350 3500 2450
+Wire Wire Line
+	3500 3200 3500 3300
+Wire Wire Line
+	3500 4000 3500 4100
+Text GLabel 3900 2850 2    50   Input ~ 0
+S3
+Text GLabel 3900 3700 2    50   Input ~ 0
+S4
+Text GLabel 3900 4500 2    50   Input ~ 0
+S5
+Wire Wire Line
+	3500 4800 3500 4900
+Wire Wire Line
+	3500 5600 3500 5700
+Wire Wire Line
+	3500 6450 3500 6550
+Wire Wire Line
+	5550 6500 5550 6600
+Wire Wire Line
+	5550 5650 5550 5750
+Wire Wire Line
+	5550 4850 5550 4950
+Wire Wire Line
+	5550 4050 5550 4150
+Wire Wire Line
+	5550 3250 5550 3350
+Wire Wire Line
+	5550 2400 5550 2500
+Wire Wire Line
+	5550 1600 5550 1700
+Wire Wire Line
+	5550 800  5550 900 
+Text GLabel 3900 5300 2    50   Input ~ 0
+S6
+Text GLabel 3900 6100 2    50   Input ~ 0
+S7
+Text GLabel 3900 6950 2    50   Input ~ 0
+S8
+Text GLabel 5950 1300 2    50   Input ~ 0
+S9
+Text GLabel 4500 1100 0    50   Input ~ 0
+D9
+Text GLabel 4500 1900 0    50   Input ~ 0
+D10
+Text GLabel 4500 2700 0    50   Input ~ 0
+D11
+Text GLabel 4500 3550 0    50   Input ~ 0
+D12
+Text GLabel 4500 4350 0    50   Input ~ 0
+D13
+Text GLabel 4500 5150 0    50   Input ~ 0
+D14
+Text GLabel 4500 5950 0    50   Input ~ 0
+D15
+Text GLabel 4500 6800 0    50   Input ~ 0
+D16
+Text GLabel 5950 2100 2    50   Input ~ 0
+S10
+Text GLabel 5950 2900 2    50   Input ~ 0
+S11
+Text GLabel 5950 3750 2    50   Input ~ 0
+S12
+Text GLabel 5950 4550 2    50   Input ~ 0
+S13
+Text GLabel 5950 5350 2    50   Input ~ 0
+S14
+Text GLabel 5950 6150 2    50   Input ~ 0
+S15
+Text GLabel 5950 7000 2    50   Input ~ 0
+S16
+Text GLabel 6800 3950 0    50   Input ~ 0
+S1
+Text GLabel 6800 3850 0    50   Input ~ 0
+S2
+Text GLabel 6800 3750 0    50   Input ~ 0
+S3
+Text GLabel 6800 3650 0    50   Input ~ 0
+S4
+Text GLabel 6800 3550 0    50   Input ~ 0
+S5
+Text GLabel 6800 3450 0    50   Input ~ 0
+S6
+Text GLabel 6800 3350 0    50   Input ~ 0
+S7
+Text GLabel 6800 3250 0    50   Input ~ 0
+S8
+Text GLabel 6800 3150 0    50   Input ~ 0
+S9
+Text GLabel 7300 3150 2    50   Input ~ 0
+S10
+Text GLabel 7300 3250 2    50   Input ~ 0
+S11
+Text GLabel 7300 3350 2    50   Input ~ 0
+S12
+Text GLabel 7300 3450 2    50   Input ~ 0
+S13
+Text GLabel 7300 3550 2    50   Input ~ 0
+S14
+Text GLabel 7300 3650 2    50   Input ~ 0
+S15
+Text GLabel 7300 3750 2    50   Input ~ 0
+S16
+$Comp
+L power:+12V #PWR0139
+U 1 1 608A4912
+P 7300 3850
+F 0 "#PWR0139" H 7300 3700 50  0001 C CNN
+F 1 "+12V" V 7315 3978 50  0000 L CNN
+F 2 "" H 7300 3850 50  0001 C CNN
+F 3 "" H 7300 3850 50  0001 C CNN
+	1    7300 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0133
+U 1 1 608F9A33
+P 7300 3950
+F 0 "#PWR0133" H 7300 3700 50  0001 C CNN
+F 1 "Earth" H 7300 3800 50  0001 C CNN
+F 2 "" H 7300 3950 50  0001 C CNN
+F 3 "~" H 7300 3950 50  0001 C CNN
+	1    7300 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x09_Odd_Even J2
+U 1 1 60A73A22
+P 7000 3550
+F 0 "J2" H 7050 4167 50  0000 C CNN
+F 1 "Arduino" H 7050 4076 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical" H 7000 3550 50  0001 C CNN
+F 3 "~" H 7000 3550 50  0001 C CNN
+	1    7000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x09_Odd_Even J1
+U 1 1 60CB50B0
+P 1200 3550
+F 0 "J1" H 1250 4167 50  0000 C CNN
+F 1 "Arduino" H 1250 4076 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical" H 1200 3550 50  0001 C CNN
+F 3 "~" H 1200 3550 50  0001 C CNN
+	1    1200 3550
+	1    0    0    -1  
+$EndComp
+Text GLabel 1500 3650 2    50   Input ~ 0
+D13
+Text GLabel 1500 3450 2    50   Input ~ 0
+D15
+Text GLabel 1500 3750 2    50   Input ~ 0
+D12
+Text GLabel 1500 3350 2    50   Input ~ 0
+D16
+Text GLabel 1500 3850 2    50   Input ~ 0
+D11
+$Comp
+L power:Earth #PWR0137
+U 1 1 606BE74B
+P 1500 3250
+F 0 "#PWR0137" H 1500 3000 50  0001 C CNN
+F 1 "Earth" H 1500 3100 50  0001 C CNN
+F 2 "" H 1500 3250 50  0001 C CNN
+F 3 "~" H 1500 3250 50  0001 C CNN
+	1    1500 3250
+	0    -1   -1   0   
+$EndComp
+Text GLabel 1500 3950 2    50   Input ~ 0
+D10
+$Comp
+L power:Earth #PWR0136
+U 1 1 606BDBDC
+P 1500 3150
+F 0 "#PWR0136" H 1500 2900 50  0001 C CNN
+F 1 "Earth" H 1500 3000 50  0001 C CNN
+F 2 "" H 1500 3150 50  0001 C CNN
+F 3 "~" H 1500 3150 50  0001 C CNN
+	1    1500 3150
+	0    -1   -1   0   
+$EndComp
+Text GLabel 1000 3450 0    50   Input ~ 0
+D4
+Text GLabel 1000 3650 0    50   Input ~ 0
+D6
+Text GLabel 1000 3350 0    50   Input ~ 0
+D3
+Text GLabel 1000 3750 0    50   Input ~ 0
+D7
+Text GLabel 1000 3250 0    50   Input ~ 0
+D2
+Text GLabel 1000 3850 0    50   Input ~ 0
+D8
+Text GLabel 1000 3150 0    50   Input ~ 0
+D1
+Text GLabel 1000 3950 0    50   Input ~ 0
+D9
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 6048F6FB
+P 6850 1500
+F 0 "J3" H 6958 1681 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6958 1590 50  0000 C CNN
+F 2 "Connector_Pin:Pin_D1.0mm_L10.0mm" H 6850 1500 50  0001 C CNN
+F 3 "~" H 6850 1500 50  0001 C CNN
+	1    6850 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J4
+U 1 1 60492699
+P 6850 1650
+F 0 "J4" H 6958 1831 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6958 1740 50  0000 C CNN
+F 2 "Connector_Pin:Pin_D1.0mm_L10.0mm" H 6850 1650 50  0001 C CNN
+F 3 "~" H 6850 1650 50  0001 C CNN
+	1    6850 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0134
+U 1 1 60494332
+P 7050 1500
+F 0 "#PWR0134" H 7050 1350 50  0001 C CNN
+F 1 "+12V" V 7065 1628 50  0000 L CNN
+F 2 "" H 7050 1500 50  0001 C CNN
+F 3 "" H 7050 1500 50  0001 C CNN
+	1    7050 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0135
+U 1 1 60494F30
+P 7050 1650
+F 0 "#PWR0135" H 7050 1400 50  0001 C CNN
+F 1 "Earth" H 7050 1500 50  0001 C CNN
+F 2 "" H 7050 1650 50  0001 C CNN
+F 3 "~" H 7050 1650 50  0001 C CNN
+	1    7050 1650
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
