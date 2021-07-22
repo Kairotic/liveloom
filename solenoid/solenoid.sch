@@ -1339,4 +1339,48 @@ F 3 "~" H 7050 1650 50  0001 C CNN
 	1    7050 1650
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 60F9D346
+P 8400 1350
+F 0 "J5" H 8480 1392 50  0000 L CNN
+F 1 "Conn_01x01" H 8480 1301 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 8400 1350 50  0001 C CNN
+F 3 "~" H 8400 1350 50  0001 C CNN
+	1    8400 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 60FA3FF9
+P 8400 1550
+F 0 "J6" H 8480 1592 50  0000 L CNN
+F 1 "Conn_01x01" H 8480 1501 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 8400 1550 50  0001 C CNN
+F 3 "~" H 8400 1550 50  0001 C CNN
+	1    8400 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 60FA6870
+P 8400 1750
+F 0 "J7" H 8480 1792 50  0000 L CNN
+F 1 "Conn_01x01" H 8480 1701 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 8400 1750 50  0001 C CNN
+F 3 "~" H 8400 1750 50  0001 C CNN
+	1    8400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J8
+U 1 1 60FA792E
+P 8400 1950
+F 0 "J8" H 8480 1992 50  0000 L CNN
+F 1 "Conn_01x01" H 8480 1901 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 8400 1950 50  0001 C CNN
+F 3 "~" H 8400 1950 50  0001 C CNN
+	1    8400 1950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
