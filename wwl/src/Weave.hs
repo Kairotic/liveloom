@@ -66,3 +66,12 @@ to2d :: [Bool] -> [[Bool]]
 to2d [] = []
 to2d bits = (take width bits) : (to2d $ drop width bits)
 
+zipAnd :: [Bool] -> [Bool] -> [Bool]
+zipAnd = zipWith (&&)
+
+zipOr :: [Bool] -> [Bool] -> [Bool]
+zipOr = zipWith (||)
+
+zipXor :: [Bool] -> [Bool] -> [Bool]
+zipXor = zipWith (/=)
+

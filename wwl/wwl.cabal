@@ -62,7 +62,7 @@ library
   -- other-extensions:
 
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.12 && <4.13, bytestring >=0.10 && <0.11
+  build-depends:       base >=4.12 && <4.14, bytestring >=0.10 && <0.11
                      , serialport, colour
 
   -- Directories containing source files.
