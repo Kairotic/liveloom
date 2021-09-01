@@ -15,6 +15,24 @@ defaultWeave = Weave {wWarp = [black],
                       wBits = cycle [up, down]
                      }
 
+data BinaryList = Up BinaryList
+                | Down BinaryList
+                | Finish
+                deriving Show
+
+list :: BinaryList -> [Bool]
+list = cycleNonEmpty . fromBinaryList
+  where cycleNonEmpty [] = []
+        cycleNonEmpty xs = cycle xs
+
+fromBinaryList :: BinaryList -> [Bool]
+fromBinaryList (Up l) = True:(fromBinaryList l)
+fromBinaryList (Down l) = False:(fromBinaryList l)
+fromBinaryList Finish = []
+
+stop :: BinaryList
+stop = Finish
+
 up :: Bool
 up = True
 
