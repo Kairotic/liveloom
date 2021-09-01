@@ -74,3 +74,4 @@ zipAnd = zipWith (&&)
 
 zipXor :: [Bool] -> [Bool] -> [Bool]
 zipXor = zipWith (/=)
+
