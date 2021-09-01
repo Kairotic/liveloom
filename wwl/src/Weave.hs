@@ -60,9 +60,17 @@ double [] = []
 double (x:xs) = (x:x:double xs)
 
 backforth :: [a] -> [a]
-backforth = every 2 reverse
+backforth = every 2 rev
 
 to2d :: [Bool] -> [[Bool]]
 to2d [] = []
 to2d bits = (take width bits) : (to2d $ drop width bits)
 
+zipOr :: [Bool] -> [Bool] -> [Bool]
+zipOr = zipWith (||)
+
+zipAnd :: [Bool] -> [Bool] -> [Bool]
+zipAnd = zipWith (&&)
+
+zipXor :: [Bool] -> [Bool] -> [Bool]
+zipXor = zipWith (/=)
