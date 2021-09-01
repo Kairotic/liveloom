@@ -22,8 +22,8 @@
  */
 
 
-//const int controlPin[16] = {2,3,4,5,6,7,8,9,10,11,12,13,A0,A1,A2,A3}; // define pins
-const int controlPin[16] = {11,3,12,4,A0,5,13,6,A1,7,A2,8,A3,9,2,10};
+const int controlPin[16] = {2,3,4,5,6,7,8,9,10,11,12,13,A0,A1,A2,A3}; // define pins
+//const int controlPin[16] = {11,3,12,4,A0,5,13,6,A1,7,A2,8,A3,9,2,10};
 
 int external_tempo = false;
 int debug = false;
@@ -82,7 +82,7 @@ void pulse_solenoids() {
   while (update_tick() == last_tick) {
     delay(1); // is this needed?
   }
-  Serial.write("aha\n");
+  //Serial.write("aha\n");
   last_tick = update_tick();
 
   for (int i=0; i < maxBits; ++i) {
