@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from itertools import *
 import operator as op
 # pip3 install more-itertools
