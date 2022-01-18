@@ -78,6 +78,8 @@ class Weave:
 
 # Tabby = repeat up and down, going back and forth from row to row.
 tabby = Weave(cycle([up,down])).backforth()
+tabby.show()
+print("attempting to send two rows of tabby in quick succession..")
 tabby.send_row()
 tabby.send_row()
 
