@@ -21,9 +21,13 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
-const int controlPin[16] = {2,3,4,5,6,7,8,9,10,11,12,13,A0,A1,A2,A3}; // define pins
+// weave 1
+//const int=-\\\\\\\ controlPin[16] = {6,10,A1,11,5,9,A2,12,4,8,A3,A0,3,7,2,13}; // define pins
+// weave 2
+//const int controlPin[16] = {8,A4,9,A3,6,A1,7,A2,4,12,5,A0,2,10,3,11}; // define pins
 //const int controlPin[16] = {11,3,12,4,A0,5,13,6,A1,7,A2,8,A3,9,2,10};
+// weave 3
+const int controlPin[16] = {2,3,4,5,6,7,8,9,10,11,13,A0,A1,A2,A3,A4}; // define pins
 
 int external_tempo = false;
 int debug = false;
@@ -44,12 +48,12 @@ int maxBits = 16;
 int incoming[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 int active[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 int incoming_n = 0;
-int weakness = 4;
-double tempo = (130.0/60.0*2)/1000.0;
+int weakness = 2;
+double tempo = (110.0/60.0*2)/1000.0;
 unsigned long first_tick_time = millis();
 int tick = 0;
 int updated_tick = 0;
-int hold_ticks = 4;
+int hold_ticks = 16;
 int t = 0;
 
 void update_pattern() {
@@ -85,7 +89,7 @@ void pulse_solenoids() {
   //Serial.write("aha\n");
   last_tick = update_tick();
 
-  for (int i=0; i < maxBits; ++i) {
+  for (int i=0; i < (maxBits + 12); ++i) {
     long int d = 0;
     int pulse = 0;
     while (update_tick() == last_tick) {
