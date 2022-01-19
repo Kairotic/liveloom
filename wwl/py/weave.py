@@ -20,7 +20,6 @@ showrows = 12
 up = True
 down = False
 
-
 class Weave:
     """A weave is an iterable, 1D sequence of ups and downs"""
     def __init__(self, bits):
@@ -65,6 +64,16 @@ class Weave:
         """Reverses every other row"""
         return self.with_rows(reversed, cycle([True,False]))
 
+    def step(self, step_by=1):
+        
+        def rotate(row_number, offset):
+            return(consume(self.bits, ))
+
+        row_numbers = count(0,1)
+        steps = count(0, step_by)
+
+        return Weave(flatten(map(rotate, row_numbers, steps)))    
+
     def send_row(self):
         row = take(warpcount, self.bits)
         s = ""
@@ -77,8 +86,11 @@ class Weave:
         arduino.write(s.encode("utf-8"))
 
 
+twill = Weave(cycle([up,down,down])).step()
+twill.show()
 
 # Tabby = repeat up and down, going back and forth from row to row.
+
 tabby = Weave(cycle([up,down])).backforth()
 tabby.show()
 print("attempting to send two rows of tabby in quick succession..")
