@@ -40,7 +40,7 @@ void setup() {
     digitalWrite(controlPin[i], LOW); 
   }
   
-  Serial.begin(115200);// initialize serial monitor with 9600 baud
+  Serial.begin(115200);// initialize serial monitor with 115200 baud
   Serial.print("hello\n");
 }
 
