@@ -11,7 +11,7 @@ import glob
 # find first arduino device
 device = glob.glob("/dev/serial/by-id/*Arduino*")[0]
 
-arduino = serial.Serial(device, baudrate=115200, timeout=0.1)
+arduino = serial.Serial(device, baudrate=9600, timeout=0.1)
 print("opened serial port", arduino.name)
 
 warpcount = 16
@@ -86,11 +86,12 @@ class Weave:
         arduino.write(s.encode("utf-8"))
 
 
-twill = Weave(cycle([up,down,down])).step()
+twill = Weave(cycle([up,down,down])) # .step()
+print("hello")
 twill.show()
 
 # Tabby = repeat up and down, going back and forth from row to row.
-
+print("hello")
 tabby = Weave(cycle([up,down])).backforth()
 tabby.show()
 print("attempting to send two rows of tabby in quick succession..")
